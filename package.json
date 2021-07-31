@@ -31,7 +31,7 @@
     "autoprefixer": "^10.3.1",
     "chalk": "^4.1.1",
     "clean-css": "^4.2.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "eleventy-plugin-blog-tools": "^0.3.1",
     "eleventy-plugin-workbox": "^1.4.0",
     "html-minifier": "^4.0.0",
