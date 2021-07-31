@@ -1,0 +1,50 @@
+---
+layout: base.njk
+section: post
+---
+<div class="repsonsivePaddingCont above-lg:flex above-lg:flex-row lg:whitespace-pre-line">
+  <article class="mb-10 w-9.5/10">
+    <div>
+      <h1 class="">{{ title }}</h1>
+      <div class="info">
+      <p class="mt-4 text-industrial-yellow date">
+        <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a
+          class="underline hover:no-underline link" href="/authors/{{ author | slug }}/">{{ author }}</a>
+      </p>
+
+      {% if tags %}
+      <p class="tags">
+        {% for tag in tags %}
+        {%- if tag != "post" -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a class="link tag" id="important-link" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {%- endif -%}
+        {% endfor %}
+      </p>
+      {% endif %}
+      </div>
+    </div>
+
+
+    <div class="post">
+      {{ layoutContent | safe }}
+          <nav class="mt-24">
+      <a class="link" id="important-link" href="{{ '/blog/' | url }}">← Go back</a>
+    </nav>
+    </div>
+  </article>
+        <div class="w-max lg:mx-auto text-industrial-yellow uppercase lg:mb-16">Read more posts..</div>
+
+        <div class="mt-4">
+          {% for post in collections.post | reverse %}
+          {% if loop.index0 < 3 %} <p class="mb-6">
+            <a class="link" href="{{ post.url | url }}">
+              <h3>{{ post.data.title }}</h3>
+            </a>
+            </p> {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

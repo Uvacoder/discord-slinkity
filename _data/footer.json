@@ -1,0 +1,68 @@
+{
+  "colThreeHeading": "Legal",
+  "footerImg": "/static/mf-ico.svg",
+  "columnThree": [
+    {
+      "displayText": "Privacy",
+      "url": "/privacy"
+    },
+    {
+      "displayText": "Terms of Service",
+      "url": "/tos"
+    },
+    {
+      "displayText": "Net neutrality & Free Speech",
+      "url": "/our-statement-on-free-speech"
+    },
+    {
+      "displayText": "Ethical design",
+      "url": "/ethical-design"
+    }
+  ],
+  "footerSocials": [
+    {
+      "socialName": "Github",
+      "displayIcon": "/static/github-icon.svg",
+      "url": "https://github.com/moonfacedesign"
+    },
+    {
+      "socialName": "Instagram",
+      "displayIcon": "/static/instagram-icon.svg",
+      "url": "https://instagram.com/moonfacedesign_"
+    }
+  ],
+  "columnOne": [
+    {
+      "displayText": "Contact",
+      "url": "/contact"
+    },
+    {
+      "displayText": "Services",
+      "url": "/services"
+    },
+    {
+      "displayText": "Works",
+      "url": "/works"
+    },
+    {
+      "displayText": "Blog",
+      "url": "/blog"
+    }
+  ],
+  "columnTwo": [
+    {
+      "displayText": "Cockpit",
+      "url": "/posts/introducing-moonface-cockpit."
+    },
+    {
+      "displayText": "Migration",
+      "url": "/posts/migrating-to-moonface"
+    },
+    {
+      "displayText": "What is JAMstack",
+      "url": "/posts/what-is-the-jamstack-and-why-do-we-love-it"
+    }
+  ],
+  "colTwoHeading": "Company",
+  "colOneHeading": "Site"
+}

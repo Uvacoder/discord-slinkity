@@ -1,0 +1,21 @@
+{
+  "navImg": "/static/mf-ico.svg",
+  "navLinks": [
+    {
+      "displayText": "Home",
+      "url": "/"
+    },
+    {
+      "displayText": "Styles",
+      "url": "/styles"
+    },
+    {
+      "displayText": "Tech",
+      "url": "/tech"
+    },
+    {
+      "displayText": "Blog",
+      "url": "/blog"
+    }
+  ]
+}

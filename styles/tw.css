@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/type/Inter.ttf') format('woff2-variations');
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: oblique 0deg 20deg;
+   }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {}
+
+@layer utilities {
+
+    :root {
+        --primary: blue;
+        --secondary: white;
+        --background: #FFF0EB;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    
+      ::-moz-selection {
+        color: #fff;
+        background-color: #1769FF;
+        }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    
+}

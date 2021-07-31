@@ -1,0 +1,49 @@
+{
+  "name": "atmos",
+  "title": "atmos",
+  "description": "The Eleventy base that powers Moonface projects 👊🔥",
+  "scripts": {
+    "eleventy:serve": "eleventy --serve",
+    "eleventy:build": "set ELEVENTY_ENV=production&&eleventy",
+    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css",
+    "tailwind:dev": "tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css --watch --jit",
+    "reset": "rm -rf .www",
+    "start": "run-p -l reset tailwind:dev eleventy:serve",
+    "build": "run-s -l reset tailwind:prod eleventy:build",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonfacedesign/atmos"
+  },
+  "author": {
+    "name": "MoonFace",
+    "email": "hello@moonface.ga",
+    "url": "https://atmos.moonface.ga"
+  },
+  "license": "The 'Dont Be a Dick' Public License",
+  "bugs": {
+    "url": "https://github.com/moonfacedesign/atmos/issues"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.3.1",
+    "chalk": "^4.1.1",
+    "clean-css": "^4.2.1",
+    "dotenv": "^8.2.0",
+    "eleventy-plugin-blog-tools": "^0.3.1",
+    "eleventy-plugin-workbox": "^1.4.0",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.26.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.3.0",
+    "netlify-cli": "^2.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "terser": "^5.6.1",
+    "uglify-es": "^3.3.9",
+    "workbox-build": "^6.1.5"
+  }
+}

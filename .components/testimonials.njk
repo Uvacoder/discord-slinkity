@@ -1,0 +1,64 @@
+<section class="mt-24">
+    <div class="w-max mx-auto text-industrial-yellow uppercase">Testimonials</div>
+    <div class="repsonsivePaddingCont mt-16 bg-birthday-pink p-16 lg:p-8">
+        <svg class="w-16" fill="#181917" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.218 65.155">
+            <g id="quote" transform="translate(91.218 107.822) rotate(-180)">
+                <g id="Group_4" data-name="Group 4" transform="translate(0 42.667)">
+                    <g id="Group_3" data-name="Group 3">
+                        <path id="Path_5" data-name="Path 5"
+                            d="M0,81.76H19.547L6.515,107.822H26.062L39.093,81.76V42.667H0Z"
+                            transform="translate(0 -42.667)" />
+                        <path id="Path_6" data-name="Path 6"
+                            d="M170.667,42.667V81.76h19.547l-13.031,26.062h19.547L209.76,81.76V42.667Z"
+                            transform="translate(-118.543 -42.667)" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <div class="relative flex lg:flex-col flex-row">
+            <h2 class="siema p-10 cursor-pointer pr-full" style="width: 65vw;">
+                <div class="w-full -ml-10">A very nice company. Did very good things and made a very nice website
+                    for my
+                    company
+                    which is also very nice.
+                    <p class="font-small text-base mt-4">Jennifer, CEO</p>
+                </div>
+                <div class="w-full -ml-10">Thanks web development! Really good. After using web development my
+                    business
+                    skyrocketed! It fits our needs perfectly.
+                    <p class="font-small text-base mt-4">Zaq, Chief Director</p>
+                </div>
+                <div class="w-full -ml-10">We've used moonface for the last five years. They've saved our business!
+                    <p class="font-small text-base mt-4">Oliver, Head of product design</p>
+                </div>
+            </h2>
+            <div class="absolute bottom-0 right-0 md:hidden text-xl">
+                <button class="prev">&LongLeftArrow;</button>
+                <button class="next">&LongRightArrow;</button>
+            </div>
+        </div>
+
+        <div class="above-md:hidden">Psssst swipe..</div>
+
+        <script>
+            const mySiema = new Siema({
+                selector: '.siema',
+                duration: 200,
+                easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+                perPage: 1,
+                startIndex: 1,
+                draggable: true,
+                multipleDrag: true,
+                threshold: 20,
+                loop: true,
+                rtl: false,
+                onInit: () => { },
+                onChange: () => { },
+            });
+            document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+            document.querySelector('.next').addEventListener('click', () => mySiema.next());
+        </script>
+
+    </div>
+
+</section>
