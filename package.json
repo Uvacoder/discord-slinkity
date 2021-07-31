@@ -30,7 +30,7 @@
     "@11ty/eleventy": "^0.12.1",
     "autoprefixer": "^10.3.1",
     "chalk": "^4.1.1",
-    "clean-css": "^4.2.1",
+    "clean-css": "^5.1.4",
     "dotenv": "^8.2.0",
     "eleventy-plugin-blog-tools": "^0.3.1",
     "eleventy-plugin-workbox": "^1.4.0",
