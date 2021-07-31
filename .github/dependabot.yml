@@ -6,5 +6,5 @@ updates:
       interval: "weekly"
     commit-message:
       # Prefix all commit messages with "npm"
-      prefix: "beep bop:robot:"
+      prefix: "beep boop:"
 
