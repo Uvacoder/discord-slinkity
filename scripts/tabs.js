@@ -22,6 +22,7 @@
             }
             content.focus();
             window.scrollTo(0, 0);
+            document.body.classList.remove("opened");
         };
         xhr.onerror = function () {
             // fallback to normal link behaviour (fail graciously)

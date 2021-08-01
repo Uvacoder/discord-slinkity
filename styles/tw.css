@@ -1,16 +1,217 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/static/type/Inter.ttf') format('woff2-variations');
-    font-weight: 125 950;
-    font-stretch: 75% 125%;
-    font-style: oblique 0deg 20deg;
-   }
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Black.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Black.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Black.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Black.svg#HelveticaNowDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-ExtraBold.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtraBold.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtraBold.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtraBold.svg#HelveticaNowDisplay-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Bold.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Bold.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Bold.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Bold.svg#HelveticaNowDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay ExtraBlack';
+    src: url('/static/type/HelveticaNowDisplay-ExtBlk.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtBlk.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtBlk.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtBlk.svg#HelveticaNowDisplay-ExtBlk') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-ExtLt.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtLt.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtLt.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtLt.svg#HelveticaNowDisplay-ExtLt') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Regular.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Regular.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Regular.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Regular.svg#HelveticaNowDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Medium.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Medium.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Medium.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Medium.svg#HelveticaNowDisplay-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Light.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Light.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Light.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Light.svg#HelveticaNowDisplay-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-BoldIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-BoldIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-BoldIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-BoldIta.svg#HelveticaNowDisplay-BoldIta') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-Thin.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-Thin.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-Thin.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-Thin.svg#HelveticaNowDisplay-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay ExtraBlack';
+    src: url('/static/type/HelveticaNowDisplay-ExtBlkIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtBlkIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtBlkIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtBlkIta.svg#HelveticaNowDisplay-ExtBlkIta') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-ExtBdIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtBdIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtBdIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtBdIta.svg#HelveticaNowDisplay-ExtBdIta') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-BlackIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-BlackIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-BlackIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-BlackIta.svg#HelveticaNowDisplay-BlackIta') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-MedIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-MedIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-MedIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-MedIta.svg#HelveticaNowDisplay-MedIta') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-ExtLtIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ExtLtIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ExtLtIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ExtLtIta.svg#HelveticaNowDisplay-ExtLtIta') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-RegIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-RegIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-RegIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-RegIta.svg#HelveticaNowDisplay-RegIta') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-ThinIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-ThinIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-ThinIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-ThinIta.svg#HelveticaNowDisplay-ThinIta') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url('/static/type/HelveticaNowDisplay-LightIta.woff2') format('woff2'),
+        url('/static/type/HelveticaNowDisplay-LightIta.woff') format('woff'),
+        url('/static/type/HelveticaNowDisplay-LightIta.ttf') format('truetype'),
+        url('/static/type/HelveticaNowDisplay-LightIta.svg#HelveticaNowDisplay-LightIta') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: fallback;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {}
+@layer base {
+
+    /* Typography */
+
+    h1 {
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none	;
+    }
+
+    .primaryBtn {
+        @apply bg-transparent py-2 px-10 rounded-none border-2 border-ivory text-ivory capitalize inline-block focus:ring-2 ring-offset-scorched-sand ring-ivory ring-offset-2;
+    }
+}
 
 @layer utilities {
 
@@ -22,6 +223,7 @@
     
     *, *:before, *:after {
       box-sizing: border-box;
+      -webkit-tap-highlight-color: #cd7b2928;
     }
     
     html,
@@ -35,15 +237,52 @@
         grid-template-rows: auto 1fr auto;
         min-height: 100vh;
     }
-    
-      ::-moz-selection {
+
+    ::-moz-selection {
         color: #fff;
         background-color: #1769FF;
         }
 
-    h1 {
-        font-size: 2rem;
+    *::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 10px;
     }
 
-    
+    *::-webkit-scrollbar-thumb {
+    background: #121211;
+    }
+
+    *::-webkit-scrollbar-track {
+    background: #FFF5E9;
+    }
+
+    #navbar {
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line {
+        fill: #FFF5E9;
+        stroke: #FFF5E9;
+        stroke-width: 20;
+        stroke-miterlimit: 10;
+      }
+
+      .line1 {
+        stroke-dasharray: 408 408;
+        stroke-dashoffset: -57.427px;
+        transition: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .opened .line1 {
+        stroke-dasharray: 0 408;
+        stroke-dashoffset: 0px;
+      }
+
+      .line2 {
+        transition: 70ms cubic-bezier(0.12, 0, 0.39, 0) 50ms;
+      }
+
+      .opened .line2 {
+        transform: translateY(-60px);
+      }
 }

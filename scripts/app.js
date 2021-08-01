@@ -8,16 +8,18 @@ $(document).ready(function () {
     }
   }
 
-  $('.quote-btn').click(function (event) {
-    setStyles("#getaquote", { "opacity": "1", "pointer-events": "all" })
-    setStyles("#quote-container", { "transform": "translateX(0)" })
-  });
-  $('#close-quote').click(function (event) {
-    setStyles("#getaquote", { "opacity": "0", "pointer-events": "none" })
-    setStyles("#quote-container", { "transform": "translateX(100%)" })
+  var previousScroll = 0;
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll < 30) {
+    } else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+      if (currentScroll > previousScroll) {
+        document.getElementById("navbar").style.transform = "translateY(-100%)";
+      } else {
+        document.getElementById("navbar").style.transform = "translateY(0)";
+      }
+      previousScroll = currentScroll;
+    }
   });
 
-  $('#quote-next').click(function (event) {
-    $('.question-set').css("transform", "translateY(-100%)");
-  });
 });

@@ -1,13 +1,14 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}" {% endif %} lang="en">
+<html class="bg-scorched-sand" {% if section %} data-current="{{ section }}" {% endif %} lang="en">
+
 
 {% include ".components/head.njk" %}
 
-<body>
+<body class="bg-ivory">
 	<header>
 		{% include ".components/nav.njk" %}
 	</header>
-	<main>
+	<main class="mt-40">
 		{{ layoutContent | safe }}
 	</main>
 

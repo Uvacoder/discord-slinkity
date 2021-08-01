@@ -1,7 +1,7 @@
 {
-  "name": "atmos",
-  "title": "atmos",
-  "description": "The Eleventy base that powers Moonface projects 👊🔥",
+  "name": "lavean-services",
+  "title": "Lavean Services Ltd",
+  "description": "Official site for Lavean Services Ltd — Created by Moonface",
   "scripts": {
     "eleventy:serve": "eleventy --serve",
     "eleventy:build": "set ELEVENTY_ENV=production&&eleventy",
@@ -15,16 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonfacedesign/atmos"
+    "url": "https://github.com/moonfacedesign/lavean-services"
   },
   "author": {
     "name": "MoonFace",
     "email": "hello@moonface.ga",
-    "url": "https://atmos.moonface.ga"
+    "url": "https://lavean.co.uk"
   },
-  "license": "The 'Dont Be a Dick' Public License",
+  "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/moonfacedesign/atmos/issues"
+    "url": "https://github.com/moonfacedesign/lavean-services/issues"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",

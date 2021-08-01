@@ -6,16 +6,12 @@
       "url": "/"
     },
     {
-      "displayText": "Styles",
-      "url": "/styles"
+      "displayText": "Services",
+      "url": "/services"
     },
     {
-      "displayText": "Tech",
-      "url": "/tech"
-    },
-    {
-      "displayText": "Blog",
-      "url": "/blog"
+      "displayText": "About",
+      "url": "/about"
     }
   ]
 }
