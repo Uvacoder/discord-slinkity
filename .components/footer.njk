@@ -1,4 +1,58 @@
-<footer class="bg-yellow-400">
-    <div>Created by <a class="link" href="https://moonface.ga">MoonFace</a></div>
-    <div>Released under the <a class="link" href="https://github.com/moonfacedesign/eleventy-starter/blob/main/LICENSE">Don't Be a D*ck License</a></div>
+<footer class="bg-scorched-sand mt-32 pb-20 text-ivory px-8 md:px-20 lg:px-32 dark-bg">
+    <ul class="flex flex-row justify-between mt-12 gap-12 flex-wrap">
+        <img class="h-20 lg:h-24 w-full sm:w-auto" src="/static/Lavean-noBg.svg" alt="">
+
+        <li class="max-w-[25ch]">
+            <h2 class="mb-4">{{ footer.colOneHeading }}</h2>
+
+            <ul class="leading-loose">
+                {% for item in footer.columnOne %}
+                <li>
+                    <a class="footer-item hover:opacity-70 ease-in duration-75" href="{{ item.url }}">{{
+                        item.displayText }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </li>
+
+        <li class="max-w-[25ch]">
+            <h2 class="mb-4">{{ footer.colTwoHeading }}</h2>
+
+            <ul class="leading-loose">
+                {% for item in footer.columnTwo %}
+                <li>
+                    <a class="footer-item hover:opacity-70 ease-in duration-75" href="{{ item.url }}">{{
+                        item.displayText }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </li>
+
+        <li class="max-w-[25ch]">
+            <h2 class="mb-4">{{ footer.colThreeHeading }}</h2>
+
+            <ul class="leading-loose">
+                {% for item in footer.columnThree %}
+                <li>
+                    <a class="footer-item hover:opacity-70 ease-in duration-75	" href="{{ item.url }}">{{
+                        item.displayText }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </li>
+
+    </ul>
+
+    <div class="flex flex-row justify-between flex-wrap gap-x-8 gap-y-4 items-center mt-16 mx-auto">
+        <div>&copy; Lavean Services Ltd 2021</div>
+        <div class="flex items-center gap-2">
+            <a href="https://moonface.ga" id="credit">
+                Website by Moonface
+            </a>
+            <img class="w-8 fill-ivory" src="/static/mf-ico.svg" alt="moonface logo">
+        </div>
+    </div>
 </footer>

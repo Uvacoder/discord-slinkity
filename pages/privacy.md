@@ -29,12 +29,13 @@ We have implemented and maintain reasonable security procedures and practices (b
 
 If you are located in certain countries, including those that fall under the scope of the European General Data Protection Regulation (AKA the “GDPR”), data protection laws give you rights with respect to your personal data, subject to any exemptions provided by the law, including the rights to:
 
-Request access to your personal data.
-Request correction or deletion of your personal data.
-Object to our use and processing of your personal data.
-Request that we limit our use and processing of your personal data.
-Request portability of your personal data.
-If you have questions about exercising these rights or need assistance, please contact us at hello@fastjam.dev.
+ * Request access to your personal data.
+ - Request correction or deletion of your personal data.
+ - Object to our use and processing of your personal data.
+ - Request that we limit our use and processing of your personal data.
+ - Request portability of your personal data.
+
+If you have questions about exercising these rights or need assistance, please contact us at legal@moonface.ga.
 
 ## Changes to this policy
 

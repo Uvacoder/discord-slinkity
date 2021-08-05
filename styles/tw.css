@@ -205,13 +205,30 @@
     /* Typography */
 
     h1 {
-        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none	;
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none my-4;
+    }
+
+    h2 {
+        @apply text-2xl tracking-tight leading-none	mb-2 mt-3;
+    }
+
+    h3 {
+        @apply text-base tracking-tight font-semibold leading-none mb-2 mt-3;
+    }
+
+    h4 {
+        @apply text-sm tracking-tight font-bold leading-none mb-1 mt-2;
     }
 
     .primaryBtn {
-        @apply bg-transparent py-2 px-10 rounded-none border-2 border-ivory text-ivory capitalize inline-block focus:ring-2 ring-offset-scorched-sand ring-ivory ring-offset-2;
+        @apply bg-transparent py-2 px-10 rounded-none border-2 border-ivory text-ivory text-lg capitalize inline-block focus:ring-2 ring-offset-scorched-sand ring-ivory ring-offset-2;
+    }
+
+    .circularBtn {
+        @apply bg-scorched-sand text-ivory text-2xl text-center tracking-tight leading-none p-8 w-44 h-44 rounded-full grid place-items-center transform hover:scale-100	;
     }
 }
+
 
 @layer utilities {
 
@@ -237,11 +254,6 @@
         grid-template-rows: auto 1fr auto;
         min-height: 100vh;
     }
-
-    ::-moz-selection {
-        color: #fff;
-        background-color: #1769FF;
-        }
 
     *::-webkit-scrollbar {
     width: 0.5rem;
@@ -285,4 +297,26 @@
       .opened .line2 {
         transform: translateY(-60px);
       }
+
+      #credit {
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+
+    #credit::after {
+        content: '';
+        position: absolute;
+        bottom: 0em;
+        right: 0;
+        width: 7ch;
+        height: 0.1em;
+        background-color: #FFF5E9;
+        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #credit:hover::after,
+    #credit:focus::after {
+        width: 100%;
+    }
 }

@@ -1,6 +1,6 @@
-<div id="navBg" class="h-screen w-full bg-scorched-sand fixed"></div>
+<div id="navBg" class="h-screen w-full bg-scorched-sand fixed lg:hidden"></div>
 
-<div id="navModal" class="h-screen w-full bg-ivory fixed">
+<div id="navModal" class="h-screen w-full bg-ivory fixed lg:hidden">
   <ul class="mt-40 px-8 md:px-20 lg:px-32">
     {% for link in nav.navLinks -%}
     <li class="mb-6">
@@ -11,8 +11,8 @@
     {% endfor -%}
   </ul>
 </div>
-<div id="navBg1" class="fixed w-full h-4 bg-scorched-sand bottom-0"></div>
-<div id="navBg2" class="fixed w-full h-20 bg-scorched-sand bottom-0 -translate-y-10"></div>
+<div id="navBg1" class="fixed w-full h-4 bg-scorched-sand bottom-0 lg:hidden"></div>
+<div id="navBg2" class="fixed w-full h-20 bg-scorched-sand bottom-0 -translate-y-10 lg:hidden"></div>
 
 
 
@@ -60,10 +60,10 @@
 </style>
 
 <nav id="navbar"
-  class="fixed w-full bg-scorched-sand flex flex-row justify-between items-center px-8 md:px-20 lg:px-32">
+  class="fixed w-full bg-scorched-sand flex flex-row justify-between items-center px-8 md:px-20 lg:px-32 z-20">
 
   <a href="/" aria-label="Home Page" class="pointer-events-auto	">
-    <img class="h-10 lg:h-12 my-8 lg:my-10" src="/static/Lavean.svg" alt="">
+    <img class="h-10 lg:h-12 my-8 lg:my-10" src="/static/Lavean-noGrad.svg" alt="">
   </a>
 
   <ul class="flex flex-row gap-12 uppercase text-lg items-center">
@@ -73,7 +73,7 @@
     </li>
     {% endfor -%}
     <li class="hidden lg:inline-block xl:inline-block">
-      <a class="primaryBtn" href="#contact">Contact Us</a>
+      <a class="primaryBtn" href="/contact">Contact Us</a>
     </li>
 
     <li class="inline-block lg:hidden">

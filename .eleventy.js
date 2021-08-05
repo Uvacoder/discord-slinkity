@@ -8,8 +8,11 @@ const { cache } = require('eleventy-plugin-workbox');
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addWatchTarget("styles/");
+  eleventyConfig.setBrowserSyncConfig({
+    injectChanges: false
+  });
 
+  eleventyConfig.addWatchTarget("styles/");
 
   // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
   // layout aliases! Say you have a bunch of existing content using

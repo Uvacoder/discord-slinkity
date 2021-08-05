@@ -7,60 +7,60 @@
       "url": "/privacy"
     },
     {
-      "displayText": "Terms of Service",
+      "displayText": "Modern Slavery Policy Statement",
       "url": "/tos"
     },
     {
-      "displayText": "Net neutrality & Free Speech",
+      "displayText": "Equal Opportunity & Diversity Policy",
       "url": "/our-statement-on-free-speech"
     },
     {
-      "displayText": "Ethical design",
+      "displayText": "Quality Policy Statement",
       "url": "/ethical-design"
-    }
-  ],
-  "footerSocials": [
-    {
-      "socialName": "Github",
-      "displayIcon": "/static/github-icon.svg",
-      "url": "https://github.com/moonfacedesign"
     },
     {
-      "socialName": "Instagram",
-      "displayIcon": "/static/instagram-icon.svg",
-      "url": "https://instagram.com/moonfacedesign_"
+      "displayText": "Health Safety and Environment Policy Statement",
+      "url": "/health-and-saftey"
+    },
+    {
+      "displayText": "Brexit Update",
+      "url": "/brexit"
     }
   ],
   "columnOne": [
-    {
-      "displayText": "Contact",
-      "url": "/contact"
-    },
     {
       "displayText": "Services",
       "url": "/services"
     },
     {
-      "displayText": "Works",
-      "url": "/works"
+      "displayText": "Case Studies",
+      "url": "/case-studies"
     },
     {
-      "displayText": "Blog",
-      "url": "/blog"
+      "displayText": "Contact",
+      "url": "/contact"
+    },
+    {
+      "displayText": "About",
+      "url": "/about"
     }
   ],
   "columnTwo": [
     {
-      "displayText": "Cockpit",
-      "url": "/posts/introducing-moonface-cockpit."
+      "displayText": "Sectors",
+      "url": "/sectors"
     },
     {
-      "displayText": "Migration",
-      "url": "/posts/migrating-to-moonface"
+      "displayText": "Responsibility",
+      "url": "/responsibility"
     },
     {
-      "displayText": "What is JAMstack",
-      "url": "/posts/what-is-the-jamstack-and-why-do-we-love-it"
+      "displayText": "Careers",
+      "url": "/careers"
+    },
+    {
+      "displayText": "Coverage",
+      "url": "/coverage"
     }
   ],
   "colTwoHeading": "Company",

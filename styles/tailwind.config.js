@@ -9,6 +9,13 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     mode: 'jit',
     theme: {
+        gridTemplateAreas: {
+            'hero': [
+                'text img1',
+                'btn img',
+                '. quote',
+            ],
+        },
         fontWeight: {
             hairline: 100,
             thin: 200,
@@ -45,6 +52,31 @@ module.exports = {
                 'focus::before'
             ],
         },
+        gridTemplateAreas: ['responsive']
     },
-    plugins: [],
+    corePlugins: {
+        container: false
+    },
+    plugins: [
+        function ({ addComponents }) {
+            addComponents({
+                '.container': {
+                    maxWidth: '100vw',
+                    '@screen sm': {
+                        maxWidth: '90vw',
+                    },
+                    '@screen md': {
+                        maxWidth: '90vw',
+                    },
+                    '@screen lg': {
+                        maxWidth: '80vw',
+                    },
+                    '@screen xl': {
+                        maxWidth: '80vw',
+                    },
+                }
+            })
+        },
+        require('@savvywombat/tailwindcss-grid-areas')
+    ],
 }

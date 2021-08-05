@@ -3,4 +3,25 @@ layout: base.njk
 section: home
 ---
 
+<div class="h-screen w-full bg-scorched-sand -mt-44 relative">
+    <div class="grid place-items-center w-full h-full absolute">
+        <img class="absolute w-1/2 z-30 opacity-30 pointer-events-none" src="/static/eclipse.svg" alt="">
+    </div>
+    <div class="container mx-auto relative">
+        <div class="px-4 grid grid-areas-hero absolute mt-44 z-40">
+            <h1 class="text-ivory uppercase grid-in-text w-[11ch] leading-tight"><i>High Quality</i> water treatment for
+                <i>your</i>
+                business
+            </h1>
+            <div class="inline-block col-start-btn">
+                <a href="/contact" class="primaryBtn mt-8">Contact us</a>
+            </div>
+            <img class="grid-in-img1 w-3/4 justify-items-center justify-self-end" src="/static/water-tank.jpg" alt="">
+            <div class="grid-in-quote row-start-btn mt-8 text-right text-ivory max-w-[50ch] justify-self-end">
+                <h3><i>"Lavean is a brilliant company that did many great things for my equally great company."</i></h3>
+                <p class="text-sm tracking-tight font-light leading-none mt-4">Johnathan Johnathan, hello inc.</p>
+            </div>
+        </div>
+    </div>
+</div>
 {{ layoutContent | safe }}
