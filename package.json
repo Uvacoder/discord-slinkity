@@ -5,11 +5,12 @@
   "scripts": {
     "eleventy:serve": "eleventy --serve",
     "eleventy:build": "set ELEVENTY_ENV=production&&eleventy",
-    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css",
+    "tailwind:prod": "tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css",
     "tailwind:dev": "tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css --watch --jit",
+    "env": "set NODE_ENV=production",
     "reset": "rm -rf .www",
     "start": "run-p -l reset tailwind:dev eleventy:serve",
-    "build": "run-s -l reset tailwind:prod eleventy:build",
+    "build": "run-s -l reset env tailwind:prod eleventy:build",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
