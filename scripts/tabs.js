@@ -72,13 +72,11 @@
             evt.preventDefault();
             $('#tabs-loader').classList.add("load");
             load(href, true);
-            document.getElementById("navbar").style.transform = "translateY(0)";
         }
     });
 
     window.addEventListener('popstate', function (e) {
         load(document.location.pathname, false);
-        document.getElementById("navbar").style.transform = "translateY(0)";
     });
 
 })();
