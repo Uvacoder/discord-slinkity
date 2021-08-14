@@ -8,18 +8,6 @@ $(document).ready(function () {
     }
   }
 
-  var previousScroll = 0;
-  $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll < 30) {
-    } else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
-      if (currentScroll > previousScroll) {
-        document.getElementById("navbar").style.transform = "translateY(-100%)";
-      } else {
-        document.getElementById("navbar").style.transform = "translateY(0)";
-      }
-      previousScroll = currentScroll;
-    }
-  });
+  window.scrollTo(0, 0);
 
 });
