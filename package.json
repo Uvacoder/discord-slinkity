@@ -38,7 +38,7 @@
     "luxon": "^2.0.1",
     "markdown-it": "^12.1.0",
     "markdown-it-anchor": "^8.1.2",
-    "netlify-cli": "^5.4.1",
+    "netlify-cli": "^6.0.9",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4",
