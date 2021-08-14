@@ -101,7 +101,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin/");
   eleventyConfig.addPassthroughCopy("scripts/");
 
-  if (!process.env.ELEVENTY_ENV) {
+  if (process.env.NODE_ENV === 'production') {
     eleventyConfig.addPassthroughCopy({ './styles/_output.css': '/styles/tw.css' });
   }
 
