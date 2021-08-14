@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="bg-scorched-sand" {% if section %} data-current="{{ section }}" {% endif %} lang="en">
+<html class="bg-lead-piping" {% if section %} data-current="{{ section }}" {% endif %} lang="en">
 
 
 {% include ".components/head.njk" %}
@@ -8,7 +8,7 @@
 	<header>
 		{% include ".components/nav.njk" %}
 	</header>
-	<main class="mt-44">
+	<main class="mt-32 lg:mt-44">
 		{{ layoutContent | safe }}
 	</main>
 

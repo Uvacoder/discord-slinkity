@@ -30,7 +30,7 @@ module.exports = {
         extend: {
             colors: {
                 'ivory': '#FFF5E9',
-                'scorched-sand': '#121211',
+                'lead-piping': '#121211',
                 'sunglow': '#FFB522',
                 'brass': '#CD7A29',
             }
