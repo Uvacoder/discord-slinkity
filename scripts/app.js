@@ -8,19 +8,4 @@ $(document).ready(function () {
     }
   }
 
-  window.scrollTo(0, 0);
-
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document
-        .getElementById("navbar").style.transform = "translateY(0)";
-    } else {
-      document
-        .getElementById("navbar").style.transform = "translateY(-100%)";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-
 });
