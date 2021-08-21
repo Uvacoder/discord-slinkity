@@ -221,15 +221,15 @@
     }
 
     .primaryBtn {
-        @apply bg-transparent py-2 px-10 rounded-none border-2 border-ivory text-ivory text-lg capitalize inline-block focus:ring-2 ring-offset-lead-piping ring-ivory ring-offset-2;
+        @apply bg-transparent py-2 px-10 rounded-none border-2 border-ivory text-ivory text-lg capitalize inline-block focus:ring-2 ring-offset-lead ring-ivory ring-offset-2;
     }
 
     .dark.primaryBtn {
-        @apply bg-lead-piping py-2 px-10 rounded-none border-2 border-ivory text-ivory text-lg capitalize inline-block focus:ring-2 ring-offset-lead-piping ring-ivory ring-offset-2;
+        @apply bg-lead py-2 px-10 rounded-none border-2 border-ivory text-ivory text-lg capitalize inline-block focus:ring-2 ring-offset-lead ring-ivory ring-offset-2;
     }
 
     .circularBtn {
-        @apply bg-lead-piping text-ivory text-xl lg:text-2xl text-center tracking-tight leading-snug p-4 lg:p-8 w-32 lg:w-44 h-32 lg:h-44 rounded-full grid place-items-center transform hover:scale-100	;
+        @apply bg-lead text-ivory text-xl lg:text-2xl text-center tracking-tight leading-snug p-4 lg:p-8 w-32 lg:w-44 h-32 lg:h-44 rounded-full grid place-items-center transform hover:scale-100	;
     }
 }
 

@@ -4,7 +4,7 @@
   <title>{{ renderData.title or title or site.title }}</title>
   <meta name="description" content="{{ metaDescription or renderData.metaDescription or site.description }}">
   
-  {% if env.environment == "production" %}
+  {% if env.environment !== "production" %}
   {% set css %}
     {% include "styles/_output.css" %}
   {% endset %}
