@@ -231,6 +231,14 @@
     .circularBtn {
         @apply bg-lead text-ivory text-xl lg:text-2xl text-center tracking-tight leading-snug p-4 lg:p-8 w-32 lg:w-44 h-32 lg:h-44 rounded-full grid place-items-center transform hover:scale-100	;
     }
+
+    .rotate.circularBtn {
+        @apply rotate-12;
+    }
+
+    .servicesIcon {
+        @apply absolute w-20 -translate-x-8 -translate-y-12 pointer-events-none;
+    }
 }
 
 
