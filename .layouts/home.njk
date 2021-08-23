@@ -1,27 +1,46 @@
 ---
 layout: base.njk
 section: home
+sectionTitle: Services
 ---
 
-<div class="h-screen w-full bg-lead-piping -mt-32 lg:-mt-44 relative">
-    <div class="grid place-items-center w-full h-full absolute">
-        <img class="absolute w-1/2 opacity-30 pointer-events-none" src="/static/eclipse.svg" alt="">
+{% include ".components/hero.njk" %}
+
+<section class="container mx-auto px-4 mt-12 lg:mt-24">
+    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12 md:mb-10">
+        <h1 class="text-center">{{ sectionTitle | safe }}</h1>
     </div>
-    <div class="container mx-auto relative">
-        <div class="px-4 grid grid-areas-hero absolute mt-32 lg:mt-44">
-            <h1 class="text-ivory uppercase grid-in-text w-[11ch] leading-tight"><i>High Quality</i> water treatment for
-                <i>your</i>
-                business
-            </h1>
-            <div class="inline-block col-start-btn">
-                <a href="/contact" class="primaryBtn mt-8">Contact us</a>
-            </div>
-            <img class="grid-in-img1 w-3/4 justify-items-center justify-self-end" src="/static/water-tank.jpg" alt="">
-            <div class="grid-in-quote row-start-btn mt-8 text-right text-ivory max-w-[50ch] justify-self-end">
-                <h3><i>"Lavean is a brilliant company that did many great things for my equally great company."</i></h3>
-                <p class="text-sm tracking-tight font-light leading-none mt-4">Johnathan Johnathan, hello inc.</p>
-            </div>
+    <div class="flex flex-col lg:flex-row justify-between">
+        <ul class="last:mb-0">
+            <li class="mb-24 relative">
+                <img class="servicesIcon" src="/static/water-drop.svg" alt="water drop">
+                <h2 class="uppercase">Water Treatment</h2>
+                <p class="max-w-[50ch]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </li>
+            <li class="mb-24 relative">
+                <img class="servicesIcon" src="/static/water-drop.svg" alt="water drop">
+                <h2 class="uppercase">Environmental Services</h2>
+                <p class="max-w-[50ch]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </li>
+            <li class="mb-24 relative">
+                <img class="servicesIcon" src="/static/water-drop.svg" alt="water drop">
+                <h2 class="uppercase">Plumbing</h2>
+                <p class="max-w-[50ch]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </li>
+        </ul>
+        <div class="inline-block justify-self-end lg:self-end lg:pb-32">
+            <a href="/services" class="circularBtn dark rotate">View more</a>
         </div>
     </div>
-</div>
+</section>
+
 {{ layoutContent | safe }}

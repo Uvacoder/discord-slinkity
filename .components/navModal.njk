@@ -1,9 +1,9 @@
-<div id="navModal" class="h-screen w-full bg-ivory fixed z-10 pt-20">
+<div id="navModal" class="h-screen overflow-auto w-full bg-ivory fixed z-20 pt-20">
   <div class="container px-8 md:px-20 lg:px-32 flex flex-row flex-wrap gap-x-24 mt-16 lg:mt-24">
     <ul id="modalLinks">
       {% for link in nav.navLinks -%}
       <li>
-        <a class="text-lead-piping leading-none inline-block" href="{{ link.url }}">
+        <a class="text-lead leading-none inline-block" href="{{ link.url }}">
           <h1>{{ link.displayText }}</h1>
         </a>
       </li>
