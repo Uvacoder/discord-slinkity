@@ -57,6 +57,9 @@ module.exports = function (eleventyConfig) {
 
   // Cache site
   eleventyConfig.addPlugin(cache, {
+    generateSWOptions: {
+      cleanupOutdatedCaches: true,
+    },
   });
 
   // Minify CSS
