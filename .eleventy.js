@@ -5,6 +5,7 @@ const htmlmin = require("html-minifier");
 const { minify } = require("terser");
 const blogTools = require("eleventy-plugin-blog-tools");
 const { cache } = require('eleventy-plugin-workbox');
+const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug");
 
 module.exports = function (eleventyConfig) {
 
@@ -130,6 +131,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('markdownify', (markdownString) =>
     md.render(markdownString)
   );
+
+  // Fix slugs
+  eleventyConfig.addPlugin(pluginBetterSlug);
 
 
   return {

@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@borisschapira/eleventy-plugin-better-slug": "^1.0.1",
     "autoprefixer": "^10.3.1",
     "chalk": "^4.1.1",
     "clean-css": "^5.1.4",
