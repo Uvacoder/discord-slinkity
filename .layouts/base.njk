@@ -1,6 +1,5 @@
 <!doctype html>
-<html id="_atmos" class="bg-lead" {% if section %} data-current="{{ section }}" {% endif %} lang="en">
-
+<html {% if section %} data-current="{{ section }}" {% endif %} lang="en">
 
 {% include ".components/head.njk" %}
 
@@ -10,6 +9,7 @@
 	</header>
 	<main class="mt-32 lg:mt-44">
 		{{ layoutContent | safe }}
+			{% include ".components/titan.njk" %}
 	</main>
 
 	{% include ".components/footer.njk" %}
