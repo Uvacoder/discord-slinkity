@@ -117,11 +117,18 @@ module.exports = function (eleventyConfig) {
     linkify: true
   };
   let opts = {
-    permalink: false
+    permalink: false,
+    html: true
   };
 
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
+  );
+
+  const md = markdownIt(options)
+  eleventyConfig.setLibrary('md', md);
+  eleventyConfig.addFilter('markdownify', (markdownString) =>
+    md.render(markdownString)
   );
 
 
@@ -134,7 +141,7 @@ module.exports = function (eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {

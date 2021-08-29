@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# Comment below to disable drafts
+publish_mode: editorial_workflow
+
+logo_url: /admin/preview-templates/titan-logo.svg
+
+media_folder: "static/" # Media files will be stored in the repo under images/uploads
+
+
+collections:
+
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    label_singular: "Post"
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+      
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "pages"
+    create: true # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: 'Home Section'
+        name: 'chunks'
+        widget: 'list'
+        types:
+          - label: 'Text'
+            name: 'text'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
+              - { label: Content, name: text, widget: markdown }
+          - label: 'Spotlight'
+            name: 'spotlight'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'spotlight.html' }
+              - { label: Header, name: header, widget: string, default: 'Spotlight' }
+              - { label: Text, name: text, widget: text, default: 'Hello World' }
