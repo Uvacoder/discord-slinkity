@@ -16,7 +16,7 @@ chunks:
       - serviceName: WATER TREATMENT
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      - serviceName: ENVIRONMENTAL SERVICES
+      - serviceName: "ENVIRONMENTAL SERVICES "
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
       - serviceName: PLUMBING
