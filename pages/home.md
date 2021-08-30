@@ -10,6 +10,9 @@ chunks:
       ## Hey there,
 
       How are you doing on this beautiful day?
+  - type: servicesList
+    template: chunks/services-list.njk
+    text: Hello World
 ---
 
 ## Get Started 
