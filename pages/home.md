@@ -14,7 +14,7 @@ chunks:
     template: chunks/services-list.njk
     services:
       - serviceName: WATER TREATMENT
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
       - serviceName: "ENVIRONMENTAL SERVICES "
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
