@@ -12,19 +12,15 @@ chunks:
       How are you doing on this beautiful day?
   - type: servicesList
     template: chunks/services-list.njk
-    services:
-      - serviceName: WATER TREATMENT
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      - serviceName: "ENVIRONMENTAL SERVICES "
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      - serviceName: PLUMBING
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
     heading: Services
+    services:
+      - service:
+          serviceName: Service 1
+          serviceDesc: Blah
+      - service:
+          serviceName: Service 2
+          serviceDesc: Blah
+      - service:
+          serviceName: Service 3
+          serviceDesc: Blah
 ---
-
-## Get Started 
-
-hello world

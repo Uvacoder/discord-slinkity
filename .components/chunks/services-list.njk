@@ -1,0 +1,23 @@
+<section class="container mx-auto px-4 mt-12 lg:mt-24">
+    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12 md:mb-10">
+      {% if type.heading %}
+        <h1 class="text-center">{{ type.heading | safe }}</h1>
+      {% endif %}
+    </div>
+    <div class="flex flex-col lg:flex-row justify-between">
+        <ul class="last:mb-0">
+        {% for item in type.services.service %}
+        <li class="mb-24 relative">
+                <img class="servicesIcon" src="/static/water-drop.svg" alt="water drop">
+                <h2 class="uppercase">{{ item.serviceName | safe }}</h2>
+                <p class="max-w-[50ch]">
+                    {{ item.serviceDesc | safe }}
+                </p>
+            </li>
+        {% endfor %}
+        </ul>
+        <div class="inline-block justify-self-end lg:self-end lg:pb-32">
+            <a href="/services" class="circularBtn dark rotate">View more</a>
+        </div>
+    </div>
+</section>

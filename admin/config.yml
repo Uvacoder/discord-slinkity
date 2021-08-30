@@ -11,6 +11,42 @@ media_folder: "static/" # Media files will be stored in the repo under images/up
 
 
 collections:
+      
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "pages"
+    create: true # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "hidden" }
+
+      - label: 'Chunks'
+        label_singular: 'Chunk'
+        name: 'chunks'
+        widget: 'list'
+        types:
+          - label: 'Text'
+            name: 'text'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
+              - { label: Content, name: text, widget: markdown }
+          - label: 'Services List'
+            name: 'servicesList'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/services-list.njk' }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: "Service"
+                name: "service"
+                widget: list
+                fields:
+                  - {label: "Service Name", name: "serviceName", widget: string }
+                  - {label: "Description", name: "serviceDesc", widget: string }
+
+
 
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
@@ -25,33 +61,3 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
-      
-  - name: "pages"
-    label: "Pages"
-    label_singular: "Page"
-    folder: "pages"
-    create: true # Change to true to allow editors to create new pages
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-      - label: 'Home Section'
-        name: 'chunks'
-        widget: 'list'
-        types:
-          - label: 'Text'
-            name: 'text'
-            widget: object
-            fields:
-              - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
-              - { label: Content, name: text, widget: markdown }
-          - label: 'Spotlight'
-            name: 'spotlight'
-            widget: object
-            fields:
-              - { label: Template, name: template, widget: hidden, default: 'spotlight.html' }
-              - { label: Header, name: header, widget: string, default: 'Spotlight' }
-              - { label: Text, name: text, widget: text, default: 'Hello World' }
