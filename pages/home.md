@@ -13,14 +13,14 @@ chunks:
   - type: servicesList
     template: chunks/services-list.njk
     heading: Services
-    services:
-      - service:
-          serviceName: Service 1
-          serviceDesc: Blah
-      - service:
-          serviceName: Service 2
-          serviceDesc: Blah
-      - service:
-          serviceName: Service 3
-          serviceDesc: Blah
+    service:
+      - serviceName: Water Treatment
+        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      - serviceName: Environmental Services
+        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      - serviceName: Plumbing
+        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
