@@ -5,19 +5,21 @@
       {% endif %}
     </div>
     <div class="flex flex-col lg:flex-row justify-between">
-        <ul class="last:mb-0">
-        {% for item in type.services.service %}
+        <ul class="last:mb-0 no-list">
+        {% for item in type.services %}
         <li class="mb-24 relative">
-                <img class="servicesIcon" src="/static/water-drop.svg" alt="water drop">
-                <h2 class="uppercase">{{ item.serviceName | safe }}</h2>
+                <img class="servicesIcon" src="{{ item.service.serviceIcon.serviceIconImg | safe }}" alt="{{ item.service.serviceIcon.serviceIconAlt | safe }}">
+                <h2 class="">{{ item.service.serviceName | safe }}</h2>
                 <p class="max-w-[50ch]">
-                    {{ item.serviceDesc | safe }}
+                    {{ item.service.serviceDesc | safe }}
                 </p>
             </li>
         {% endfor %}
         </ul>
+        {% if type.button %}
         <div class="inline-block justify-self-end lg:self-end lg:pb-32">
-            <a href="/services" class="circularBtn dark rotate">View more</a>
+            <a href="/services" class="circularBtn dark rotate">{{ type.button | safe}}</a>
         </div>
+      {% endif %}
     </div>
 </section>

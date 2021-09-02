@@ -39,12 +39,26 @@ collections:
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/services-list.njk' }
               - { label: Heading, name: heading, widget: string, required: false }
-              - label: "Service"
-                name: "service"
+              - label: "Services"
+                label_singular: "Service"
+                name: "services"
                 widget: list
                 fields:
-                  - {label: "Service Name", name: "serviceName", widget: string }
-                  - {label: "Description", name: "serviceDesc", widget: string }
+                  - label: "Service"
+                    name: "service"
+                    widget: "object"
+                    summary: '{{fields.serviceName}}'
+                    fields:
+                      - {label: "Service Name", name: "serviceName", widget: string }
+                      - {label: "Description", name: serviceDesc, widget: string }
+                      - label: "Icon"
+                        name: serviceIcon
+                        widget: object
+                        fields:
+                          - {label: "Icon", name: serviceIconImg, widget: image }
+                          - {label: "Alt text", name: serviceIconAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+
+              - { label: Button, name: button, widget: string, required: false }
 
 
 

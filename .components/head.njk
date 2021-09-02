@@ -22,8 +22,12 @@
     {% include "scripts/app.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
-        {% set js %}
+  {% set js %}
     {% include "scripts/tabs.js" %}
+  {% endset %}
+  <script>{{ js | jsmin | safe }}</script>
+  {% set js %}
+    {% include "scripts/vendor/siema.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
   

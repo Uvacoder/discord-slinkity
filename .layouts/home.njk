@@ -1,9 +1,45 @@
 ---
 layout: base.njk
 section: home
-sectionTitle: Services
 ---
 
 {% include ".components/hero.njk" %}
 
 {{ layoutContent | safe }}
+
+<div class="bg-lead">
+    <section class="mx-auto px-4 mt-12 lg:mt-24 pt-8 pb-4 lg:pt-16 lg:pb-8">
+        <div class="px-4 w-auto mx-auto text-center">
+            <h1 class="text-ivory">Client Stories</h1>
+        </div>
+        <div class=" pt-8 w-full">
+            <div class="border-2 border-ivory p-8">
+                <h2 class="text-ivory">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </h2>
+            </div>
+            <div class="border-2 border-ivory p-8">
+                <h2 class="text-ivory">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </h2>
+            </div>
+            <div class="border-2 border-ivory p-8">
+                <h2 class="text-ivory">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const mySiema = new Siema({
+        perPage: 3,
+        loop: true,
+    });
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next());
+</script>

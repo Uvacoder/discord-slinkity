@@ -213,7 +213,7 @@
     }
 
     h2 {
-        @apply text-2xl tracking-tight leading-none	mb-2 mt-3;
+        @apply text-2xl tracking-tight leading-tight	mb-2 mt-3;
     }
 
     h3 {
@@ -236,12 +236,12 @@
         @apply bg-lead text-ivory text-xl lg:text-2xl text-center tracking-tight leading-snug p-4 lg:p-8 w-32 lg:w-44 h-32 lg:h-44 rounded-full grid place-items-center transform hover:scale-100	;
     }
 
-    .rotate.circularBtn {
-        @apply rotate-12;
+    .servicesIcon {
+        @apply absolute w-20 -translate-x-2 sm:-translate-x-8 -translate-y-12 pointer-events-none;
     }
 
-    .servicesIcon {
-        @apply absolute w-20 -translate-x-8 -translate-y-12 pointer-events-none;
+    .no-list {
+        @apply list-none p-0 my-0;
     }
 }
 
@@ -249,9 +249,10 @@
 @layer utilities {
 
     :root {
-        --primary: blue;
-        --secondary: white;
-        --background: #FFF0EB;
+        --ivory: #FFF5E9;
+        --lead: #121211;
+        --sunglow: #121211;
+        --brass: #CD7A29;
     }
     
     *, *:before, *:after {
@@ -320,6 +321,12 @@
         cursor: pointer;
     }
 
+    main ul {
+        list-style-type: disc;
+        padding-left: 2.5em;
+        margin: 1.5em 0;
+      }
+
     #credit::after {
         content: '';
         position: absolute;
@@ -334,5 +341,22 @@
     #credit:hover::after,
     #credit:focus::after {
         width: 100%;
+    }
+
+    .rotate.circularBtn {
+        transform: rotate(10deg);
+    }
+
+    .circularBtn {
+        transition: all 200ms ease-in-out 0s;
+    }
+
+    .circularBtn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 red 0 red;
+    }
+
+    .rotate.circularBtn:hover {
+        transform: rotate(10deg) scale(1.1);
     }
 }
