@@ -14,7 +14,6 @@
             const d = xhr.responseXML;
             const dTitle = d.title || '';
             const dcontent = $('main', d);
-            $('#tabs-loader').classList.remove("load");
             content.innerHTML = (dcontent && dcontent.innerHTML) || '';
             document.title = dTitle;
             if (pushState) {
@@ -70,7 +69,6 @@
             }
             // initiate SPA
             evt.preventDefault();
-            $('#tabs-loader').classList.add("load");
             load(href, true);
         }
     });

@@ -8,38 +8,91 @@ section: home
 {{ layoutContent | safe }}
 
 <div class="bg-lead">
-    <section class="mx-auto px-4 mt-12 lg:mt-24 pt-8 pb-4 lg:pt-16 lg:pb-8">
+    <section class="mx-auto mt-12 lg:mt-24 pt-8 pb-8 lg:pt-16 lg:pb-12 w-auto max-w-[97vw]">
         <div class="px-4 w-auto mx-auto text-center">
             <h1 class="text-ivory">Client Stories</h1>
         </div>
-        <div class=" pt-8 w-full">
-            <div class="border-2 border-ivory p-8">
+        <div class="absolute w-1/3 bg-red-500 h-[20ch] left-0 my-auto mt-10"></div>
+        <div class="absolute w-1/3 bg-blue-500 h-[20ch] right-0 my-auto mt-10"></div>
+        <div class="siema pt-8 overflow-hidden">
+            <div class="border-2 border-ivory p-8 mx-4 my-2">
                 <h2 class="text-ivory">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </h2>
             </div>
-            <div class="border-2 border-ivory p-8">
+            <div class="border-2 border-ivory p-8 mx-4 my-2">
+                <h2 class="text-ivory">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </h2>
+            </div>
+            <div class="border-2 border-ivory p-8 mx-4 my-2">
                 <h2 class="text-ivory">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </h2>
             </div>
-            <div class="border-2 border-ivory p-8">
+            <div class="border-2 border-ivory p-8 mx-4 my-2">
+                <h2 class="text-ivory">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </h2>
+            </div>
+            <div class="border-2 border-ivory p-8 mx-4 my-2">
                 <h2 class="text-ivory">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </h2>
             </div>
         </div>
+        <div
+            class="dragVisual bg-ivory w-20 h-20 rounded-full pointer-events-none absolute top-0 left-0 flex justify-center items-center">
+            Drag<div>
+
     </section>
 </div>
+<style>
+    .dragVisual {
+        transform: translate(-50%, -50%);
+    }
 
+    .siema:hover .dragVisual {
+        display: flex;
+    }
+</style>
 <script>
-    const mySiema = new Siema({
-        perPage: 3,
-        loop: true,
-    });
+    const siemas = document.querySelectorAll('.siema');
+
+    // this is fairly new way of looping through DOM Elements
+    // More about ithere: https://pawelgrzybek.com/loop-through-a-collection-of-dom-elements/
+    // For better compatibility I suggest using for loop
+    for (const siema of siemas) {
+        new Siema({
+            selector: siema,
+            perPage: {
+                0: 1,
+                1024: 2,
+                1280: 3
+            },
+            loop: true,
+            multipleDrag: true
+        })
+    }
+
+    let slider = new Siema()
+
+    function load(href, pushState) {
+        const xhr = new XMLHttpRequest()
+
+        slider.destroy()
+
+        xhr.onload = function () {
+            // ... populate content, then
+            slider = new Siema()
+        }
+    }
+
     document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
     document.querySelector('.next').addEventListener('click', () => mySiema.next());
 </script>
