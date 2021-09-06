@@ -134,7 +134,7 @@
                 value: function () {
                   var e = this.selectorWidth / this.perPage,
                     t = this.config.loop ? this.innerElements.length + 2 * this.perPage : this.innerElements.length;
-                  (this.sliderFrame = document.createElement("div")), (this.sliderFrame.style.width = e * t + "px"), this.enableTransition(), this.config.draggable && (this.selector.style.cursor = "-webkit-grab");
+                  (this.sliderFrame = document.createElement("div")), (this.sliderFrame.style.width = e * t + "px"), this.enableTransition(), this.config.draggable && (this.selector.style.cursor = "none");
                   var i = document.createDocumentFragment();
                   if (this.config.loop)
                     for (var r = this.innerElements.length - this.perPage; r < this.innerElements.length; r++) {
@@ -334,7 +334,7 @@
               {
                 key: "mouseupHandler",
                 value: function (e) {
-                  e.stopPropagation(), (this.pointerDown = !1), (this.selector.style.cursor = "-webkit-grab"), this.enableTransition(), this.drag.endX && this.updateAfterDrag(), this.clearDrag();
+                  e.stopPropagation(), (this.pointerDown = !1), (this.selector.style.cursor = "none"), this.enableTransition(), this.drag.endX && this.updateAfterDrag(), this.clearDrag();
                 },
               },
               {
@@ -343,7 +343,7 @@
                   if ((e.preventDefault(), this.pointerDown)) {
                     "A" === e.target.nodeName && (this.drag.preventClick = !0),
                       (this.drag.endX = e.pageX),
-                      (this.selector.style.cursor = "-webkit-grabbing"),
+                      (this.selector.style.cursor = "none"),
                       (this.sliderFrame.style.webkitTransition = "all 0ms " + this.config.easing),
                       (this.sliderFrame.style.transition = "all 0ms " + this.config.easing);
                     var t = this.config.loop ? this.currentSlide + this.perPage : this.currentSlide,
@@ -359,7 +359,7 @@
                 value: function (e) {
                   this.pointerDown &&
                     ((this.pointerDown = !1),
-                      (this.selector.style.cursor = "-webkit-grab"),
+                      (this.selector.style.cursor = "none"),
                       (this.drag.endX = e.pageX),
                       (this.drag.preventClick = !1),
                       this.enableTransition(),

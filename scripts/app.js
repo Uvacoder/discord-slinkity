@@ -40,4 +40,11 @@ $(document).ready(function () {
     mouseY = event.pageY;
   })
 
+  $('.siema').mouseover(function () {
+    $('.dragVisual').addClass("active");
+  });
+  $('.siema').mouseout(function () {
+    $('.dragVisual').removeClass("active");
+  });
+
 });
