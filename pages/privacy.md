@@ -6,6 +6,9 @@ metaDescription: This is a sample meta description. If one is not present in
   instead.
 permalink: /privacy/index.html
 chunks:
+  - type: pageHeading
+    template: chunks/page-title.njk
+    heading: Privacy Policy
   - type: text
     template: chunks/text.njk
     text: >-

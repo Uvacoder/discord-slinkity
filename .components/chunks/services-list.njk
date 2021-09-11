@@ -1,11 +1,11 @@
-<section class="container mx-auto px-4 mt-12 lg:mt-24">
-    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12 md:mb-10">
+<section class="container mx-auto px-4 sectionMargin">
+    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12">
       {% if type.heading %}
         <h1 class="text-center">{{ type.heading | safe }}</h1>
       {% endif %}
     </div>
     <div class="flex flex-col lg:flex-row justify-between">
-        <ul class="last:mb-0 no-list">
+        <ul class="services no-list">
         {% for item in type.services %}
         <li class="mb-24 relative">
                 <img class="servicesIcon" src="{{ item.service.serviceIcon.serviceIconImg | safe }}" alt="{{ item.service.serviceIcon.serviceIconAlt | safe }}">
@@ -17,8 +17,8 @@
         {% endfor %}
         </ul>
         {% if type.button %}
-        <div class="inline-block justify-self-end lg:self-end lg:pb-32">
-            <a href="/services" class="circularBtn dark rotate">{{ type.button | safe}}</a>
+        <div class="inline-flex justify-end items-end mt-12">
+            <a href="/services" class="lg:mb-12 circularBtn dark rotate">{{ type.button | safe}}</a>
         </div>
       {% endif %}
     </div>

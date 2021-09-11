@@ -14,20 +14,20 @@
   {% endif %}
 
 
+  {% set js %}
+    {% include "scripts/vendor/siema.js" %}
+  {% endset %}
+  <script>{{ js | jsmin | safe }}</script>
+    {% set js %}
+    {% include "scripts/tabs.js" %}
+  {% endset %}
+  <script>{{ js | jsmin | safe }}</script>
     {% set js %}
     {% include "scripts/vendor/jquery.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
   {% set js %}
     {% include "scripts/app.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-  {% set js %}
-    {% include "scripts/tabs.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-  {% set js %}
-    {% include "scripts/vendor/siema.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
   

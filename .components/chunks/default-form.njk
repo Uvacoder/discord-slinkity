@@ -1,0 +1,55 @@
+<section class="container mx-auto px-4 sectionMargin">
+    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12">
+        <h1 class="text-center">{{ type.heading | safe}}</h1>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-1/2 gap-y-8 flex flex-col justify-between">
+            <div>
+                <div class="text-lead">
+                    Our friendly team will be happy guiding you and your
+                    business on the way to safe drinking water.
+                </div>
+                <div class="flex gap-x-8 flex-wrap mt-8">
+                    {% for contact in type.contacts %}
+                    <div class="flex flex-col">
+                        <h2>{{ contact.name | safe }}</h2>
+                        <div href="tel:+44 0179312345">{{ contact.contact | safe }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% if type.image %}
+            <div class="w-5/6 mx-auto lg:mx-0">
+                <img src="/static/water-tank.webp" class="w-full h-full" alt="">
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="w-full lg:w-1/2 border-2 border-lead p-8">
+            <form name="contact" method="POST" data-netlify="true">
+                {% for field in type.fields %}
+                <div class="w-full flex lg:flex-row flex-col gap-4">
+                    <div class="lg:w-1/2 w-full">
+                        <label>Name<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
+                                type="text" name="name" /></label>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <label>Email<br> <input class="w-full mt-2 border-2 border-lead bg-transparent p-2" type="text"
+                                name="email" autocomplete="email"
+                                title="The domain portion of the email address is invalid (the portion after the @)."
+                                pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                                required /></label>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="mt-8 relative">
+                    <label>Message<br><textarea class="w-full h-48 mt-2 border-2 border-lead bg-transparent p-2"
+                            name="messsage"></textarea></label>
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="primaryBtn dark mt-8 relative bottom-0 right-0">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

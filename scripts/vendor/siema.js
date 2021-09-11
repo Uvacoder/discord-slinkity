@@ -408,7 +408,7 @@
                 value: function () {
                   var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     t = arguments[1];
-                  if ((this.detachEvents(), (this.selector.style.cursor = "auto"), e)) {
+                  if ((this.detachEvents(), (this.selector.style.cursor = "none"), e)) {
                     for (var i = document.createDocumentFragment(), r = 0; r < this.innerElements.length; r++) i.appendChild(this.innerElements[r]);
                     (this.selector.innerHTML = ""), this.selector.appendChild(i), this.selector.removeAttribute("style");
                   }

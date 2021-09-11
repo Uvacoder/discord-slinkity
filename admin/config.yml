@@ -27,12 +27,110 @@ collections:
         name: 'chunks'
         widget: 'list'
         types:
+          - label: 'Page Heading'
+            name: 'pageHeading'
+            widget: string
+            fields:
+              - { label: Text, name: heading, widget: string }
+              - { label: Template, name: template, widget: hidden, default: 'chunks/page-title.njk' }
+
           - label: 'Text'
             name: 'text'
             widget: object
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
               - { label: Content, name: text, widget: markdown }
+
+          - label: 'Default Form'
+            name: 'defaultForm'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/default-form.njk' }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: "Contacts"
+                label_singular: "Contact"
+                name: contacts
+                widget: list
+                fields:
+                   - { label: Name, name: name, widget: string }
+                   - { label: Contact, name: contact, widget: string }
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - {label: "Image", name: image, widget: image }
+                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+  
+
+              - label: "Fields"
+                label_singular: "Field"
+                name: fields
+                widget: list
+                fields:
+                  - label: 'Input'
+                    name: 'input'
+                    widget: object
+                    summary: {{label}}
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Name, name: name, widget: string }
+
+          - label: 'CTA banner'
+            name: 'ctaBanner'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/cta-split.njk' }
+              - { label: Button, name: button, widget: string, required: true }
+              - label: "Content"
+                name: content
+                widget: object
+                fields:
+                  - { label: Subheading, name: subHeading, widget: string, required: true }
+                  - label: "Items"
+                    label_singular: "Item"
+                    name: items
+                    widget: list
+                    types:
+                      - label: Image list
+                        name: "imageList"
+                        widget: object
+                        create: true
+                        fields:
+                          - label: images
+                            label_singular: Image
+                            name: images
+                            widget: list
+                            fields:
+                              - {label: "Image", name: image, widget: image }
+                              - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+
+                      - label: 'Text'
+                        name: 'text'
+                        widget: object
+                        fields:
+                          - { label: Content, name: text, widget: markdown }
+
+          - label: 'Testimonials'
+            name: 'testimonials'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/testimonials.njk' }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: "Slides"
+                label_singular: "Slide"
+                name: "slides"
+                hint: "You should have at least 3 of these"
+                widget: list
+                fields:
+                  - label: "slide"
+                    name: "slide"
+                    widget: "object"
+                    summary: '{{slideCompany}}'
+                    fields:
+                      - {label: "Quote", name: "slideQuote", widget: "string", pattern: ['^.{1,190}$', "Maximum 190 characters"], hint: "Do not include quotation marks" }
+                      - {label: "Name", name: slideName, widget: string }
+                      - {label: "Company", name: slideCompany, widget: string }
+
           - label: 'Services List'
             name: 'servicesList'
             widget: object
