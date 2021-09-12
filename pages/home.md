@@ -27,30 +27,6 @@ chunks:
         serviceIcon:
           serviceIconImg: /static/spanner.svg
           serviceIconAlt: spanner
-  - type: testimonials
-    template: chunks/testimonials.njk
-    slides:
-      - slide:
-          slideQuote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          slideName: Jordan Jordan
-          slideCompany: Hello inc.
-      - slide:
-          slideQuote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          slideName: Jordan Jordan
-          slideCompany: Hello inc.
-      - slide:
-          slideQuote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          slideName: Jeremy that's it
-          slideCompany: Big tech.
-      - slide:
-          slideQuote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          slideName: Jeremy that's it
-          slideCompany: Big tech.
-    heading: Client Stories
   - type: ctaBanner
     template: chunks/cta-split.njk
     content:
