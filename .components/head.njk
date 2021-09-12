@@ -1,14 +1,23 @@
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="{{ 'noindex' if site.hide == true }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ renderData.title or title or site.title }}</title>
   <meta name="description" content="{{ metaDescription or renderData.metaDescription or site.description }}">
+
+  <!-- Open Graph Tags -->
   <meta name="og:title" content="{{ title or renderData.title or site.title }}">
   <meta name="og:url" content="https://lavean.co.uk/">
   <meta property="og:image" content="{{ ogImage or renderData.ogImage or site.ogImage }}" />
+  <meta property="og:image:secure_url" content="{{ ogImage or renderData.ogImage or site.ogImage }}">
   <meta property="og:type" content="website" />
   <meta property="og:description" content="{{ metaDescription or renderData.metaDescription or site.description }}" />
   <meta property="og:locale" content="en_GB" />
+
+  <!-- Dublin Core Tags -->
+  <meta name="dc.title" content="{{ renderData.title or title or site.title }}">
+  <meta name="dc.description" content="{{ metaDescription or renderData.metaDescription or site.description }}">
+  <meta name="dc.language" content="en_GB">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -31,25 +40,15 @@
 
   {% set js %}
     {% include "scripts/vendor/siema.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-    {% set js %}
     {% include "scripts/tabs.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-    {% set js %}
     {% include "scripts/vendor/jquery.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-  {% set js %}
     {% include "scripts/app.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
   
-  <!--Favicons-->
+<!--Favicons-->
 <link rel="icon" type="image/svg+xml" href="/static/pwa/favicon.svg">
 <link rel="icon" type="image/png" href="/static/pwa/favicon.png">
 <link rel="manifest" href="/static/pwa/manifest.json?v=74932BGFJKNE">
-<!---->
 
 </head>

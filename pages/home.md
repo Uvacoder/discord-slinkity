@@ -60,6 +60,7 @@ chunks:
               imageAlt: Bristol Old Vic
       subHeading: Trusted by the most renowned organizations
     button: Talk to us
+    flip: true
   - type: defaultForm
     template: chunks/default-form.njk
     heading: Get in touch

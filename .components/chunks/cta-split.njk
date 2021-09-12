@@ -1,15 +1,15 @@
 
-<section class="container mx-auto px-4 sectionMargin flex flex-row justify-between flex-wrap gap-x-24 gap-y-6 {{ 'flex-row-reverse' if type.flip == 'true' }}">
+<section class="container mx-auto px-4 sectionMargin flex flex-row justify-between flex-wrap gap-x-24 gap-y-6 {{ 'flex-row-reverse' if type.content.flip == 'true' }}">
     <div class="w-auto">
-        <div class="flex {{ 'flex-row-reverse' if type.flip == 'true' }} items-center gap-x-4 flex-grow">
+        <div class="flex {{ 'flex-row-reverse' if type.content.flip == true }} items-center gap-x-4 flex-grow">
             <div class="hidden h-0.5 min-w-[10ch] w-auto bg-lead opacity-30 md:inline-block"></div>
-            <h2 class="m-0 {{ 'text-right' if type.flip == 'true' }}">{{ type.content.subHeading | safe }}</h2>
+            <h2 class="m-0 {{ 'text-right' if type.content.flip == 'true' }}">{{ type.content.subHeading | safe }}</h2>
         </div>
         {% for type in type.content.items -%}
 
         {% if type.type == "imageList" %}
 
-        <ul class="flex list-none {{ 'justify-end' if type.flip == 'true' }} gap-4 mt-12 noPadding">
+        <ul class="flex list-none {{ 'justify-end' if type.content.flip == 'true' }} gap-4 mt-12 noPadding">
         {% for image in type.images -%}
             <li class="h-10 inline">
                 <img class="w-full h-full" width="100%" height="100%" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}">
@@ -21,7 +21,7 @@
 
                 {% if type.type == "text" %}
 
-               <div class="mt-8 max-w-[70ch] {{ 'text-right' if type.flip == 'true' }}">{{ type.text | markdownify | safe }}</div>
+               <div class="mt-8 max-w-[70ch] {{ 'text-right' if type.content.flip == 'true' }}">{{ type.text | markdownify | safe }}</div>
 
         {% endif %}
 

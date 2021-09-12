@@ -8,10 +8,10 @@
         <ul class="services no-list">
         {% for item in type.services %}
         <li class="mb-24 relative">
-                <img class="servicesIcon" src="{{ item.service.serviceIcon.serviceIconImg | safe }}" alt="{{ item.service.serviceIcon.serviceIconAlt | safe }}">
-                <h2 class="">{{ item.service.serviceName | safe }}</h2>
+                <img class="servicesIcon" src="{{ item.serviceIcon.serviceIconImg | safe }}" alt="{{ item.serviceIcon.serviceIconAlt | safe }}">
+                <h2 class="">{{ item.serviceName | safe }}</h2>
                 <p class="max-w-[50ch]">
-                    {{ item.service.serviceDesc | safe }}
+                    {{ item.serviceDesc | safe }}
                 </p>
             </li>
         {% endfor %}

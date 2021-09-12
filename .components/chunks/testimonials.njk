@@ -12,10 +12,10 @@
             {% for item in type.slides %}
             <div class="border-2 border-ivory p-8 mx-4 my-2 flex flex-col justify-between h-[30ch]">
                 <h2 class="text-ivory">
-                    "{{ item.slide.slideQuote | safe }}"
+                    "{{ item.slideQuote | safe }}"
                 </h2>
                 <small class="text-ivory opacity-40 flex items-center gap-x-4 pt-4">
-                    <p class="flex-shrink-0	">{{ item.slide.slideName | safe }}, &nbsp; {{ item.slide.slideCompany | safe }}</p>
+                    <p class="flex-shrink-0	">{{ item.slideName | safe }}, &nbsp; {{ item.slideCompany | safe }}</p>
                     <div class="h-0.5 flex-grow bg-ivory opacity-40 inline-block"></div>
                 </small>
             </div>

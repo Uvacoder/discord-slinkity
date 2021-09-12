@@ -1,5 +1,6 @@
 {
     "title": "Lavean Services: High quality water treatment for your business.",
     "description": "Lavean Services Limited supply a wide range of services such as water hygiene analysis, legionella risk assessments, heating water analysis, heating balancing and commissioning to name a few.",
-    "ogImage": "/static/ogImage.png"
+    "ogImage": "/static/ogImage.png",
+    "hide": true
 }
