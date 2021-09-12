@@ -27,6 +27,27 @@ chunks:
         serviceIcon:
           serviceIconImg: /static/spanner.svg
           serviceIconAlt: spanner
+  - type: testimonials
+    template: chunks/testimonials.njk
+    slides:
+      - slideCompany: Hello inc.
+        slideName: Jordan Jordan
+        slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        slideName: Joshua Joshua
+        slideCompany: Karma inc.
+      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        slideName: Ria Ria
+        slideCompany: Sky inc.
+      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit.
+        slideName: Alessa Alessa
+        slideCompany: Water inc.
+    heading: Client Stories
   - type: ctaBanner
     template: chunks/cta-split.njk
     content:
@@ -56,25 +77,4 @@ chunks:
       image:
         image: /static/water-tank.webp
         imageAlt: water tank
-  - type: testimonials
-    template: chunks/testimonials.njk
-    slides:
-      - slideCompany: Hello inc.
-        slideName: Jordan Jordan
-        slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        slideName: Joshua Joshua
-        slideCompany: Karma inc.
-      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        slideName: Ria Ria
-        slideCompany: Sky inc.
-      - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
-        slideName: Alessa Alessa
-        slideCompany: Water inc.
-    heading: Client Stories
 ---
