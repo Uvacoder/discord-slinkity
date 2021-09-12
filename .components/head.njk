@@ -3,6 +3,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ renderData.title or title or site.title }}</title>
   <meta name="description" content="{{ metaDescription or renderData.metaDescription or site.description }}">
+  <meta name="og:title" content="{{ title or renderData.title or site.title }}">
+  <meta name="og:url" content="https://lavean.co.uk/">
+  <meta property="og:image" content="{{ ogImage or renderData.ogImage or site.ogImage }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ metaDescription or renderData.metaDescription or site.description }}" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="lavean.co.uk">
+  <meta property="twitter:url" content="https://lavean.co.uk/">
+  <meta name="twitter:title" content="{{ renderData.title or title or site.title }}">
+  <meta name="twitter:description" content="{{ metaDescription or renderData.metaDescription or site.description }}">
+  <meta name="twitter:image" content="{{ ogImage or renderData.ogImage or site.ogImage }}">
+
   
   {% if env.environment !== "production" %}
   {% set css %}

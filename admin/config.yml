@@ -11,6 +11,18 @@ media_folder: "static/" # Media files will be stored in the repo under images/up
 
 
 collections:
+
+  - name: "Settings"
+    label: "Settings"
+    label_singular: "Setting"
+    files: 
+     - label: SEO and metadata
+       file: "_data/site.json"
+       name: "metadata"
+       fields:
+         - { label: Default title, name: title, widget: string, hint: "Default title for all pages" }
+         - { label: Default description, name: description, widget: string, hint: "Default description for all pages" }
+         - { label: Keywords, name: keywords, widget: string, hint: "Separated by commas" }
       
   - name: "pages"
     label: "Pages"
@@ -47,40 +59,49 @@ collections:
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/default-form.njk' }
               - { label: Heading, name: heading, widget: string, required: false }
-              - label: "Contacts"
-                label_singular: "Contact"
-                name: contacts
-                widget: list
-                fields:
-                   - { label: Name, name: name, widget: string }
-                   - { label: Contact, name: contact, widget: string }
-              - label: "Image"
-                name: image
+
+              - label: "Content"
+                name: content
                 widget: object
                 fields:
-                  - {label: "Image", name: image, widget: image }
-                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+                   - { label: Text, name: text, widget: markdown, required: false }
+
+                   - label: "Contacts"
+                     label_singular: "Contact"
+                     name: contacts
+                     widget: list
+                     fields:
+                        - { label: Name, name: name, widget: string }
+                        - { label: Contact, name: contact, widget: string }
+                   - label: "Image"
+                     name: image
+                     widget: object
+                     fields:
+                       - {label: "Image", name: image, widget: image, required: false }
+                       - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO", required: false }
+
   
 
               - label: "Fields"
                 label_singular: "Field"
                 name: fields
                 widget: list
+                file: "chunks/default-form.njk"
                 fields:
-                  - label: 'Input'
-                    name: 'input'
-                    widget: object
-                    summary: {{label}}
-                    fields:
-                      - { label: Label, name: label, widget: string }
-                      - { label: Name, name: name, widget: string }
+                  - { label: Label, name: label, widget: string }
+                  - { label: Name, name: name, widget: string }
+                  - label: Type
+                    name: type
+                    widget: select
+                    options: ["text", "email", "tel", "file"]
+
 
           - label: 'CTA banner'
             name: 'ctaBanner'
             widget: object
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/cta-split.njk' }
-              - { label: Button, name: button, widget: string, required: true }
+              - { label: Button, name: button, widget: string, required: true, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
               - label: "Content"
                 name: content
                 widget: object
@@ -156,7 +177,7 @@ collections:
                           - {label: "Icon", name: serviceIconImg, widget: image }
                           - {label: "Alt text", name: serviceIconAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
 
-              - { label: Button, name: button, widget: string, required: false }
+              - { label: Button, name: button, widget: string, required: false, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
 
 
 

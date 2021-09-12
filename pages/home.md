@@ -74,14 +74,17 @@ chunks:
       - input:
           label: Email
           name: email
-    contacts:
-      - name: Phone
-        contact: +44 0179312345
-      - name: Email
-        contact: enquiries@lavean.co.uk
-      - name: Fax
-        contact: fax@lavean.co.uk
-    image:
-      image: /static/water-tank.webp
-      imageAlt: water tank
+    content:
+      text: "Our friendly team will be happy guiding you and your business on the
+        way to safe drinking water."
+      contacts:
+        - name: Phone
+          contact: +44 0179312345
+        - name: Email
+          contact: enquiries@lavean.co.uk
+        - name: Fax
+          contact: fax@lavean.co.uk
+      image:
+        image: /static/water-tank.webp
+        imageAlt: water tank
 ---
