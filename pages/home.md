@@ -64,7 +64,19 @@ chunks:
   - type: defaultForm
     template: chunks/default-form.njk
     heading: Get in touch
-    fields: []
+    fields:
+      - label: Name
+        name: Name
+        type: text
+      - label: Email
+        name: email
+        type: email
+      - label: Company
+        name: company
+        type: text
+      - label: Role
+        name: role
+        type: text
     content:
       text: Our friendly team will be happy guiding you and your business on the way
         to safe drinking water.
