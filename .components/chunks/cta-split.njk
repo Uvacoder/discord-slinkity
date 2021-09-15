@@ -1,5 +1,5 @@
 
-<section class="container mx-auto px-4 sectionMargin flex flex-row justify-between flex-wrap gap-x-24 gap-y-6 {{ 'flex-row-reverse' if type.content.flip == 'true' }}">
+<section class="container mx-auto px-4 sectionMargin flex flex-row justify-between flex-wrap gap-x-24 gap-y-4 {{ 'flex-row-reverse' if type.content.flip == 'true' }}">
     <div class="w-auto">
         <div class="flex {{ 'flex-row-reverse' if type.content.flip == true }} items-center gap-x-4 flex-grow">
             <div class="hidden h-0.5 min-w-[10ch] w-auto bg-lead opacity-30 md:inline-block"></div>
@@ -9,7 +9,7 @@
 
         {% if type.type == "imageList" %}
 
-        <ul class="flex list-none {{ 'justify-end' if type.content.flip == 'true' }} gap-4 mt-12 noPadding">
+        <ul class="flex list-none gap-x-4 mt-12 noPadding">
         {% for image in type.images -%}
             <li class="h-10 inline">
                 <img class="w-full h-full" width="100%" height="100%" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}">
@@ -28,6 +28,6 @@
         {% endfor -%}
     </div>
     <div class="inline-flex justify-end flex-grow">
-        <a href="/contact" class="circularBtn dark">{{ type.button | safe }}</a>
+        <a href="/{{ type.buttonUrl }}" class="circularBtn dark">{{ type.button | safe }}</a>
     </div>
 </section>

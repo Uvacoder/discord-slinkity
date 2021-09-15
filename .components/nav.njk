@@ -10,7 +10,7 @@
   <ul class="flex flex-row gap-12 uppercase text-lg items-center">
     {% for link in nav.navLinks -%}
     <li class="hidden lg:inline-block xl:inline-block">
-      <a class="text-ivory leading-none" href="{{ link.url }}">{{ link.displayText }}</a>
+      <a class="text-ivory leading-none" href="/{{ link.url }}">{{ link.displayText }}</a>
     </li>
     {% endfor -%}
     <li class="hidden lg:inline-block xl:inline-block">

@@ -3,15 +3,15 @@
   "navLinks": [
     {
       "displayText": "Home",
-      "url": "/"
+      "url": ""
     },
     {
       "displayText": "Services",
-      "url": "/services"
+      "url": "services"
     },
     {
       "displayText": "About",
-      "url": "/about"
+      "url": "about"
     }
   ]
 }

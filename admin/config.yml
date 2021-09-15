@@ -12,7 +12,7 @@ media_folder: "static/" # Media files will be stored in the repo under images/up
 
 collections:
 
-  - name: "Settings"
+  - name: "settings"
     label: "Settings"
     label_singular: "Setting"
     editor:
@@ -25,8 +25,38 @@ collections:
          - { label: Default title, name: title, widget: string, hint: "Default title for all pages" }
          - { label: Default description, name: description, widget: string, hint: "Default description for all pages" }
          - { label: Keywords, name: keywords, widget: string, hint: "Separated by commas" }
-         - { label: Social Image, name: ogImage, widget: image, hint: "Separated by commas [Learn more](https://moonface.ga/support/titan#Social-images)" }
-         - { label: Hide from search, name: hide, widget: boolean, default: false, hint: "Hide your website from all search engines. [Learn more](https://moonface.ga/support/titan#Social-images)" }
+         - { label: Social Image, name: ogImage, widget: image, hint: "Appears with links to your website on social media sites. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - { label: Hide from search, name: hide, widget: boolean, default: false, hint: "Hide your website from all search engines. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+  - name: "components"
+    label: "Components"
+    label_singular: "Component"
+    files: 
+     - label: Navigation
+       file: "nav.njk"
+       name: "navigation"
+       fields:
+         - label: "Logo"
+           name: navImg
+           widget: object
+           fields:
+             - {label: "Image", name: image, widget: image, required: false }
+             - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+         - label: "Links"
+           name: Links
+           widget: list
+           max: 3
+           fields:
+             - {label: "Text", name: text, widget: string }
+             - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - label: "Button"
+           name: cta
+           widget: object
+           fields:
+             - {label: "Text", name: text, widget: string }
+             - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+
      
   - name: "pages"
     label: "Pages"
@@ -35,7 +65,7 @@ collections:
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", hint: "[Learn more](https://moonface.ga/support/titan#Social-images)" }
+      - { label: "Title", name: "title", widget: "string", hint: "[Learn more](https://moonface.digital/support/titan#Social-images)" }
       - { label: "Description", name: "metaDescription", widget: "string", required: false, hint: "Defaults to description set in SEO and metadescription" }
       - { label: "Social Image", name: "ogImage", widget: "image", required: false, hint: "Defaults to image set in SEO and metadescription" }
       - { label: "Body", name: "body", widget: "hidden" }
@@ -84,9 +114,7 @@ collections:
                      widget: object
                      fields:
                        - {label: "Image", name: image, widget: image, required: false }
-                       - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO", required: false }
-
-  
+                       - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
 
               - label: "Fields"
                 label_singular: "Field"
@@ -176,20 +204,9 @@ collections:
                       - {label: "Icon", name: serviceIconImg, widget: image }
                       - {label: "Alt text", name: serviceIconAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
 
-              - { label: Button, name: button, widget: string, required: false, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
-
-
-
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
-    label_singular: "Post"
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
+              - label: "Button"
+                name: button
+                widget: object
+                fields:
+                  - { label: Button, name: button, widget: string, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
+                  - { label: Path, name: buttonUrl, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }

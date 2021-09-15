@@ -57,8 +57,11 @@ $(document).ready(function () {
       mouseY = event.pageY;
     })
 
+    document.querySelector('.dragVisual').classList.add("opacity-0-important");
+
     document.querySelector('.siema').addEventListener("mouseenter", function (event) {
       document.querySelector('.dragVisual').classList.add("active");
+      document.querySelector('.dragVisual').classList.add("opacity-0-important");
     });
     document.querySelector('.siema').addEventListener("mouseleave", function (event) {
       document.querySelector('.dragVisual').classList.remove("active");

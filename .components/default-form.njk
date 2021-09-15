@@ -1,20 +1,20 @@
 <section class="container mx-auto px-4 sectionMargin">
-    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12">
-        {% if type.heading %}
-        <h1 class="text-center">{{ type.heading | safe}}</h1>
+    <div class="mx-auto px-10 md:px-4 mb-12">
+        {% if repeatable.defaultForm.heading %}
+        <h1 class="text-center">{{ repeatable.defaultForm.heading | safe}}</h1>
         {% endif %}
     </div>
     <div class="flex flex-col justify-center lg:flex-row gap-8">
-        {% if type.content %}
+        {% if repeatable.defaultForm.content %}
         <div class="w-full lg:w-1/2 gap-y-8 flex flex-col justify-between">
             <div>
-                {% if type.content.text %}
+                {% if repeatable.defaultForm.content.text %}
                 <div class="text-lead">
-                    {{ type.content.text | markdownify | safe }}
+                    {{ repeatable.defaultForm.content.text | markdownify | safe }}
                 </div>
                 {% endif %}
                 <div class="flex gap-x-8 flex-wrap mt-8">
-                    {% for contact in type.content.contacts %}
+                    {% for contact in repeatable.defaultForm.content.contacts %}
                     <div class="flex flex-col">
                         <h2>{{ contact.name | safe }}</h2>
                         <div href="tel:+44 0179312345">{{ contact.contact | safe }}</div>
@@ -22,25 +22,25 @@
                     {% endfor %}
                 </div>
             </div>
-            {% if type.content.image %}
+            {% if repeatable.defaultForm.content.image %}
             <div class="w-5/6 mx-auto lg:mx-0">
-                <img src="{{ type.content.image.image }}" class="w-full h-full" alt="{{ type.content.image.imageAlt }}">
+                <img src="{{ repeatable.defaultForm.content.image.image }}" class="w-full h-full" alt="{{ repeatable.defaultForm.content.imageAlt }}">
             </div>
             {% endif %}
         </div>
         {% endif %}
 
         <div class="w-full lg:w-1/2 border-2 border-lead p-8">
-            <form name="{{ type.formName}}" method="POST" data-netlify="true">
-                <div class="w-full flex lg:flex-row flex-col gap-4">
+            <form name="{{ type.formName}}" method="POST" data-netlify="true" class="flex flex-col gap-y-4 justify-between">
+<div class="flex flex-wrap gap-4 justify-between">
                 {% for field in type.fields %}
-                <div class="lg:w-1/2 w-full">
-                    <label>{{ field.input.label }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
-                            type="{{ field.input.type }}" name="{{ field.input.name }}" /></label>
+                <div class="flex-shrink w-full xl:max-w-[45%]">
+                    <label>{{ field.label }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
+                            type="{{ field.type }}" name="{{ field.name }}" /></label>
                 </div>
                 {% endfor %}
                 </div>
-                <div class="mt-8 relative">
+                <div class="relative">
                     <label>Message<br><textarea class="w-full h-48 mt-2 border-2 border-lead bg-transparent p-2"
                             name="messsage"></textarea></label>
                 </div>

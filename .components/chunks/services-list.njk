@@ -1,6 +1,6 @@
 <section class="container mx-auto px-4 sectionMargin">
-    <div class="w-4/5 mx-auto px-10 md:px-4 mb-12">
-      {% if type.content %}
+    <div class="mx-auto px-10 md:px-4 mb-12">
+      {% if type.heading %}
         <h1 class="text-center">{{ type.heading | safe }}</h1>
       {% endif %}
     </div>
@@ -18,7 +18,7 @@
         </ul>
         {% if type.button %}
         <div class="inline-flex justify-end items-end mt-12">
-            <a href="/services" class="lg:mb-12 circularBtn dark rotate">{{ type.button | safe}}</a>
+            <a href="/{{ type.buttonUrl }}" class="lg:mb-12 circularBtn dark rotate">{{ type.button | safe}}</a>
         </div>
       {% endif %}
     </div>

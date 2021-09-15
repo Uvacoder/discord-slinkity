@@ -1,4 +1,4 @@
-<a href="https://moonface.ga/ethical-design?ref=github"><img src="https://user-images.githubusercontent.com/45979758/125195603-42254f80-e24e-11eb-80fe-96580c010477.png" target="_blank" alt="ethical design" width="" height="25px"></a>
+<a href="https://moonface.digital/ethical-design?ref=github"><img src="https://user-images.githubusercontent.com/45979758/125195603-42254f80-e24e-11eb-80fe-96580c010477.png" target="_blank" alt="ethical design" width="" height="25px"></a>
 <img src="https://user-images.githubusercontent.com/45979758/126357602-251fc5b8-ef3f-42a3-9170-53fc5535bd41.png" target="_blank" alt="ethical design" width="" height="25px">
 
 
@@ -166,8 +166,8 @@ By default atmos uses [TailwindCSS](https://tailwindcss.com) to generate styles.
 
 ## Bug reports/help 👋
 
-If you need any help or want to file a bug report, contact the [Lead developer](mailto:kyle@moonface.ga).
+If you need any help or want to file a bug report, contact the [Lead developer](mailto:kyle@moonface.digital).
 
-<a href="https://moonface.ga?ref=github">
+<a href="https://moonface.digital?ref=github">
 <img src="https://user-images.githubusercontent.com/45979758/123560051-ef509000-d797-11eb-88dd-842b365a1f5f.png" target="_blank" alt="moonface" width="" height="25px">
 </a>

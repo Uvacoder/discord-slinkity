@@ -12,7 +12,7 @@ chunks:
   - type: text
     template: chunks/text.njk
     text: >-
-      We're glad you care about your privacy as much as we do. It is our responsibility to respect and protect your privacy regarding any information we may collect from you across our website, moonface.ga and other subdomains of [.moonface.ga]. We strive for full transparency on how we gather, use, and share your personal information.
+      We're glad you care about your privacy as much as we do. It is our responsibility to respect and protect your privacy regarding any information we may collect from you across our website, lavean.co.uk and other subdomains of [.lavean.co.uk]. We strive for full transparency on how we gather, use, and share your personal information.
 
 
 
@@ -89,7 +89,7 @@ chunks:
 
 
 
-      If you have questions about exercising these rights or need help, please contact us at privacy@moonface.ga.
+      If you have questions about exercising these rights or need help, please contact us at mark@lavean.co.uk.
 
 
 

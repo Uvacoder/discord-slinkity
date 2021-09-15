@@ -1,7 +1,7 @@
 /**
- * tabs  by MoonFace Design
- * https://moonface.ga
- * https://github.com/moonfacedesign
+ * tabs  by Moonface Digital
+ * https://moonface.digital
+ * https://github.com/moonfacedigital
  */
 
 (function () {
