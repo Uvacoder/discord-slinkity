@@ -83,18 +83,25 @@ $(document).ready(function () {
   document.querySelector('.next').addEventListener('click', () => mySiema.next());
 
   // AJAX for all site forms
-  document.querySelectorAll("form").addEventListener("submit", handleSubmit);
+  let form = document.querySelectorAll("form");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let myForm = document.querySelector('form');
-    let formData = new FormData(myForm)
-    fetch('/', {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    fetch(form.getAttribute('action'), {
       method: 'POST',
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: {
+        'Accept': 'Content-Type": "multipart/form-data',
+        'Content-Type': 'Content-Type": "multipart/form-data'
+      },
       body: new URLSearchParams(formData).toString()
-    }).then(() => console.log('Form successfully submitted')).catch((error) =>
-      alert(error))
-  }
+    })
+      .then(res => {
+        if (res) {
+          console.log("sumbit")
+        }
+      });
+  });
 
 });
