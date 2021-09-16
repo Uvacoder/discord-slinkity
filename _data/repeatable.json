@@ -1,28 +1,6 @@
 {
   "defaultForm": {
     "heading": "Get in touch",
-    "fields": [
-      {
-        "label": "Name",
-        "name": "Name",
-        "type": "text"
-      },
-      {
-        "label": "Email",
-        "name": "email",
-        "type": "email"
-      },
-      {
-        "label": "Company",
-        "name": "company",
-        "type": "text"
-      },
-      {
-        "label": "Role",
-        "name": "role",
-        "type": "text"
-      }
-    ],
     "content": {
       "text": "Our friendly team will be happy guiding you and your business on the way to safe drinking water.",
       "contacts": [
@@ -43,52 +21,30 @@
         "image": "/static/water-tank.webp",
         "imageAlt": "water tank"
       }
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Name",
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "label": "Email",
+          "name": "email",
+          "type": "email"
+        },
+        {
+          "label": "Company",
+          "name": "company",
+          "type": "text"
+        },
+        {
+          "label": "Role",
+          "name": "role",
+          "type": "text"
+        }
+      ]
     }
-  },
-  "heading": "Get in touch",
-  "content": {
-    "text": "Our friendly team will be happy guiding you and your business on the way to safe drinking water.",
-    "contacts": [
-      {
-        "name": "Phone",
-        "contact": "+44 0179312345"
-      },
-      {
-        "name": "Email",
-        "contact": "enquiries@lavean.co.uk"
-      },
-      {
-        "name": "Fax",
-        "contact": "fax@lavean.co.uk"
-      }
-    ],
-    "image": {
-      "image": "/static/water-tank.webp",
-      "imageAlt": "water tank"
-    }
-  },
-  "form": {
-    "fields": [
-      {
-        "label": "Name",
-        "name": "name",
-        "type": "text"
-      },
-      {
-        "label": "Email",
-        "name": "email",
-        "type": "email"
-      },
-      {
-        "label": "Company",
-        "name": "company",
-        "type": "text"
-      },
-      {
-        "label": "Role",
-        "name": "role",
-        "type": "text"
-      }
-    ]
   }
 }

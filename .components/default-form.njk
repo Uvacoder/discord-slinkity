@@ -9,11 +9,11 @@
         <div class="w-full lg:w-1/2 gap-y-8 flex flex-col justify-between">
             <div>
                 {% if repeatable.defaultForm.content.text %}
-                <div class="text-lead">
+                <div class="text-lead mb-8">
                     {{ repeatable.defaultForm.content.text | markdownify | safe }}
                 </div>
                 {% endif %}
-                <div class="flex gap-x-8 flex-wrap mt-8">
+                <div class="flex gap-x-8 flex-wrap">
                     {% for contact in repeatable.defaultForm.content.contacts %}
                     <div class="flex flex-col">
                         <h2>{{ contact.name | safe }}</h2>
@@ -31,11 +31,11 @@
         {% endif %}
 
         <div class="w-full lg:w-1/2 border-2 border-lead p-8">
-            <form name="{{ type.formName}}" method="POST" data-netlify="true" class="flex flex-col gap-y-4 justify-between">
+            <form name="{{ repeatable.defaultForm.form.formName}}" method="POST" data-netlify="true" class="flex flex-col gap-y-4 justify-between">
 <div class="flex flex-wrap gap-4 justify-between">
-                {% for field in type.fields %}
-                <div class="flex-shrink w-full xl:max-w-[45%]">
-                    <label>{{ field.label }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
+                {% for field in repeatable.defaultForm.form.fields %}
+                <div class="w-full xl:flex-1 xl:min-w-[45%]">
+                    <label>{{ field.label | safe }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
                             type="{{ field.type }}" name="{{ field.name }}" /></label>
                 </div>
                 {% endfor %}

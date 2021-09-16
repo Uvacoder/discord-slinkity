@@ -16,7 +16,7 @@ chunks:
       items:
         - type: text
           text: >-
-            Due to a further influx of work, Lavean Services Limited are
+            Due to a further influx of work, we are
             actively recruiting and have a number of positions available.
 
 

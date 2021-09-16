@@ -33,7 +33,7 @@ collections:
     label_singular: "Component"
     files: 
      - label: Navigation
-       file: "nav.njk"
+       file: "_data/nav.json"
        name: "navigation"
        fields:
          - label: "Logo"
@@ -55,6 +55,48 @@ collections:
            fields:
              - {label: "Text", name: text, widget: string }
              - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+     - label: 'Default Form'
+       name: 'defaultForm'
+       file: "_data/repeatable.json"
+       widget: object
+       fields:
+         - { label: Template, name: template, widget: hidden, default: 'chunks/default-form.njk' }
+         - { label: Heading, name: heading, widget: string, required: false }
+         - label: "Content"
+           name: content
+           widget: object
+           fields:
+              - { label: Text, name: text, widget: markdown, required: false }
+              - label: "Contacts"
+                label_singular: "Contact"
+                name: contacts
+                widget: list
+                fields:
+                   - { label: Name, name: name, widget: string }
+                   - { label: Contact, name: contact, widget: string }
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - {label: "Image", name: image, widget: image, required: false }
+                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+         - label: "Form"
+           name: form
+           widget: object
+           fields:
+             - {label: "Form name", name: formName, widget: string, hint: "Name must be unique from other forms. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+             - label: "Fields"
+               label_singular: "Field"
+               name: fields
+               widget: list
+               fields:
+                 - { label: Label, name: label, widget: string }
+                 - { label: Name, name: name, widget: string }
+                 - label: Type
+                   name: type
+                   widget: select
+                   options: ["text", "email", "tel", "file"]
 
 
      
@@ -88,46 +130,6 @@ collections:
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
               - { label: Content, name: text, widget: markdown }
-
-          - label: 'Default Form'
-            name: 'defaultForm'
-            widget: object
-            fields:
-              - { label: Template, name: template, widget: hidden, default: 'chunks/default-form.njk' }
-              - { label: Heading, name: heading, widget: string, required: false }
-
-              - label: "Content"
-                name: content
-                widget: object
-                fields:
-                   - { label: Text, name: text, widget: markdown, required: false }
-
-                   - label: "Contacts"
-                     label_singular: "Contact"
-                     name: contacts
-                     widget: list
-                     fields:
-                        - { label: Name, name: name, widget: string }
-                        - { label: Contact, name: contact, widget: string }
-                   - label: "Image"
-                     name: image
-                     widget: object
-                     fields:
-                       - {label: "Image", name: image, widget: image, required: false }
-                       - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
-
-              - label: "Fields"
-                label_singular: "Field"
-                name: fields
-                widget: list
-                file: "chunks/default-form.njk"
-                fields:
-                  - { label: Label, name: label, widget: string }
-                  - { label: Name, name: name, widget: string }
-                  - label: Type
-                    name: type
-                    widget: select
-                    options: ["text", "email", "tel", "file"]
 
 
           - label: 'CTA banner'
