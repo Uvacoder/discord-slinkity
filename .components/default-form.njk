@@ -31,7 +31,7 @@
         {% endif %}
 
         <div id="submitted" class="w-full lg:w-1/2 border-2 border-lead p-8">
-            <form name="{{ repeatable.defaultForm.form.formName}}" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="#submitted" class="flex flex-col gap-y-4 justify-between">
+            <form name="{{ repeatable.defaultForm.form.formName}}" method="POST" data-netlify="true" action="#submitted" class="flex flex-col gap-y-4 justify-between">
 <div class="flex flex-wrap gap-4 justify-between">
                 {% for field in repeatable.defaultForm.form.fields %}
                 <div class="w-full xl:flex-1 xl:min-w-[45%]">
@@ -44,7 +44,6 @@
                     <label>Message<br><textarea class="w-full h-48 mt-2 border-2 border-lead bg-transparent p-2"
                             name="messsage"></textarea></label>
                 </div>
-                  <div data-netlify-recaptcha="true"></div>
                 <div class="flex justify-end">
                     <button type="submit" class="primaryBtn dark mt-8 relative bottom-0 right-0">Send</button>
                 </div>
