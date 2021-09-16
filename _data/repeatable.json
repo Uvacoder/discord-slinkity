@@ -23,6 +23,7 @@
       }
     },
     "form": {
+      "formName": "contact",
       "fields": [
         {
           "label": "Name",
@@ -37,11 +38,6 @@
         {
           "label": "Company",
           "name": "company",
-          "type": "text"
-        },
-        {
-          "label": "Role",
-          "name": "role",
           "type": "text"
         }
       ]
