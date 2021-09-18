@@ -1,0 +1,21 @@
+{
+  "content": {
+    "items": [
+      {
+        "type": "imageList",
+        "images": [
+          {
+            "image": "/static/standard-hotel-logo.svg",
+            "imageAlt": "The Standard hotel"
+          },
+          {
+            "image": "/static/old-vic-logo.svg",
+            "imageAlt": "Bristol Old Vic"
+          }
+        ]
+      }
+    ],
+    "subHeading": "Trusted by the most renowned organizations"
+  },
+  "button": "Talk to us"
+}
