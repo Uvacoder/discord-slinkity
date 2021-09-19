@@ -12,7 +12,11 @@ chunks:
   - type: text
     template: chunks/text.njk
     text: >-
-      We're glad you care about your privacy as much as we do. It is our responsibility to respect and protect your privacy regarding any information we may collect from you across our website, lavean.co.uk and other subdomains of [.lavean.co.uk]. We strive for full transparency on how we gather, use, and share your personal information.
+      We're glad you care about your privacy as much as we do. It is our
+      responsibility to respect and protect your privacy regarding any
+      information we may collect from you across our website, lavean.co.uk and
+      other subdomains of [.lavean.co.uk]. We strive for full transparency on
+      how we gather, use, and share your personal information.
 
 
 
@@ -105,4 +109,6 @@ chunks:
 
 
       We also encourage you to frequently check this page for any changes to our privacy policy. Your further use of our website after a change to our privacy policy will be subject to the updated policy.
+  - type: presetCtaBanner2
+    template: chunks/cta-split-2.njk
 ---
