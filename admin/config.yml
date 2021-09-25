@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  squash_merges: true
 
 # Comment below to disable drafts
 publish_mode: editorial_workflow
@@ -15,6 +16,8 @@ collections:
   - name: "settings"
     label: "Settings"
     label_singular: "Setting"
+    description: >
+      Careful.. changing these settings could have unwanted effects.
     editor:
       preview: false
     files: 
@@ -32,6 +35,7 @@ collections:
     label: "Components"
     label_singular: "Component"
     files: 
+
      - label: Navigation
        file: "_data/nav.json"
        name: "navigation"
@@ -56,48 +60,54 @@ collections:
              - {label: "Text", name: text, widget: string }
              - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
 
-     - label: 'Default Form'
-       name: 'defaultForm'
-       file: "_data/repeatable.json"
-       widget: object
-       fields:
-         - { label: Template, name: template, widget: hidden, default: 'chunks/default-form.njk' }
-         - { label: Heading, name: heading, widget: string, required: false }
-         - label: "Content"
-           name: content
-           widget: object
-           fields:
-              - { label: Text, name: text, widget: markdown, required: false }
-              - label: "Contacts"
-                label_singular: "Contact"
-                name: contacts
+  - name: "presets"
+    label: "Presets"
+    label_singular: "Preset"
+    description: >
+      Reusable chunks you can add to your pages.
+    files: 
+
+      - label: 'Form'
+        name: 'presetForm'
+        file: "_data/presets/form.json"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: string, required: false }
+ 
+          - label: "Content"
+            name: content
+            widget: object
+            fields:
+               - { label: Text, name: text, widget: markdown, required: false }
+               - label: "Contacts"
+                 label_singular: "Contact"
+                 name: contacts
+                 widget: list
+                 fields:
+                    - { label: Name, name: name, widget: string }
+                    - { label: Contact, name: contact, widget: string }
+               - label: "Image"
+                 name: image
+                 widget: object
+                 fields:
+                   - {label: "Image", name: image, widget: image, required: false }
+                   - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+          - label: "Form"
+            name: form
+            widget: object
+            fields:
+              - {label: "Form name", name: formName, widget: string, hint: "Name must be unique from other forms. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+              - label: "Fields"
+                label_singular: "Field"
+                name: fields
                 widget: list
                 fields:
-                   - { label: Name, name: name, widget: string }
-                   - { label: Contact, name: contact, widget: string }
-              - label: "Image"
-                name: image
-                widget: object
-                fields:
-                  - {label: "Image", name: image, widget: image, required: false }
-                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
-         - label: "Form"
-           name: form
-           widget: object
-           fields:
-             - {label: "Form name", name: formName, widget: string, hint: "Name must be unique from other forms. [Learn more](https://moonface.digital/support/titan#Social-images)" }
-             - label: "Fields"
-               label_singular: "Field"
-               name: fields
-               widget: list
-               fields:
-                 - { label: Label, name: label, widget: string }
-                 - { label: Name, name: name, widget: string }
-                 - label: Type
-                   name: type
-                   widget: select
-                   options: ["text", "email", "tel", "file"]
-
+                  - { label: Label, name: label, widget: string }
+                  - { label: Name, name: name, widget: string }
+                  - label: Type
+                    name: type
+                    widget: select
+                    options: ["text", "email", "tel", "file"]
 
      
   - name: "pages"
@@ -108,7 +118,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "[Learn more](https://moonface.digital/support/titan#Social-images)" }
-      - { label: "Description", name: "metaDescription", widget: "string", required: false, hint: "Defaults to description set in SEO and metadescription" }
+      - { label: "Description", name: "metaDescription", widget: "string", required: false, hint: "Defaults to description set in SEO and metadata" }
       - { label: "Social Image", name: "ogImage", widget: "image", required: false, hint: "Defaults to image set in SEO and metadescription" }
       - { label: "Body", name: "body", widget: "hidden" }
 
@@ -117,6 +127,7 @@ collections:
         name: 'chunks'
         widget: 'list'
         types:
+
           - label: 'Page Heading'
             name: 'pageHeading'
             widget: string
@@ -136,7 +147,7 @@ collections:
             name: 'ctaBanner'
             widget: object
             fields:
-              - { label: Template, name: template, widget: hidden, default: 'chunks/cta-split.njk' }
+              - { label: Template, name: template, widget: hidden, default: 'chunks/cta-banner.njk' }
               - { label: Button, name: button, widget: string, required: true, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
               - label: "Content"
                 name: content
@@ -160,14 +171,13 @@ collections:
                             fields:
                               - {label: "Image", name: image, widget: image }
                               - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
-
                       - label: 'Text'
                         name: 'text'
                         widget: object
                         fields:
                           - { label: Content, name: text, widget: markdown }
 
-                  - {label: "Flip layout", name: "flip", widget: "boolean", default: false, hint: "Positions button to the left"}
+                  - {label: "Flip layout", name: "flip", widget: "boolean", default: false, hint: "Positions content to the right and button to the left"}
 
           - label: 'Testimonials'
             name: 'testimonials'
@@ -182,7 +192,7 @@ collections:
                 widget: list
                 summary: "{{fields.slideCompany}}"
                 fields:
-                  - {label: "Quote", name: "slideQuote", widget: "string", pattern: ['^.{1,190}$', "Maximum 190 characters"], hint: "Do not include quotation marks" }
+                  - {label: "Quote", name: "slideQuote", widget: "string", pattern: ['^.{1,123}$', "Maximum 123 characters"], hint: "Do not include quotation marks" }
                   - {label: "Name", name: slideName, widget: string }
                   - {label: "Company", name: slideCompany, widget: string }
 
@@ -212,3 +222,54 @@ collections:
                 fields:
                   - { label: Button, name: button, widget: string, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
                   - { label: Path, name: buttonUrl, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+          - label: 'Form'
+            name: 'form'
+            widget: object
+            fields:
+              - { label: "Heading", name: "heading", widget: string, required: false }
+              - { label: Template, name: template, widget: hidden, default: 'chunks/form.njk' }
+     
+              - label: "Content"
+                name: content
+                widget: object
+                fields:
+                   - { label: Text, name: text, widget: markdown, required: false }
+                   - label: "Contacts"
+                     label_singular: "Contact"
+                     name: contacts
+                     widget: list
+                     fields:
+                        - { label: Name, name: name, widget: string }
+                        - { label: Contact, name: contact, widget: string }
+                   - label: "Image"
+                     name: image
+                     widget: object
+                     fields:
+                       - {label: "Image", name: image, widget: image, required: false }
+                       - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+              - label: "Form"
+                name: form
+                widget: object
+                fields:
+                  - {label: "Form name", name: formName, widget: string, hint: "Name must be unique from other forms. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+                  - label: "Fields"
+                    label_singular: "Field"
+                    name: fields
+                    widget: list
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Name, name: name, widget: string }
+                      - label: Type
+                        name: type
+                        widget: select
+                        options: ["text", "email", "tel", "file"]
+
+          - label: "Preset form"
+            name: "presetForm"
+            collapsed: true
+            summary: "Preset chunks can not be edited here"
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/form.njk' }
+              - { label: Preset, name: preset, widget: hidden, default: 'true' }

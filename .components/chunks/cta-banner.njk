@@ -1,3 +1,39 @@
+{% if type.flip == true %}
+
+<section class="container mx-auto px-4 sectionMargin flex justify-between flex-wrap gap-x-24 gap-y-4 flex-row-reverse">
+    <div class="w-auto">
+        <div class="flex flex-row-reverse items-center gap-x-4 flex-grow">
+            <div class="hidden h-0.5 min-w-[10ch] w-auto bg-lead opacity-30 md:inline-block"></div>
+            <h2 class="m-0 text-right">{{ type.content.subHeading | safe }}</h2>
+        </div>
+        {% for type in type.content.items -%}
+
+        {% if type.type == "imageList" %}
+
+        <ul class="flex justify-end list-none gap-x-4 mt-12 noPadding">
+        {% for image in type.images -%}
+            <li class="h-10 inline">
+                <img class="w-full h-full" width="100%" height="100%" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}">
+            </li>
+         {% endfor -%}
+        </div>
+
+        {% endif %}
+
+                {% if type.type == "text" %}
+
+               <div class="mt-8 max-w-[70ch] text-right">{{ type.text | markdownify | safe }}</div>
+
+        {% endif %}
+
+        {% endfor -%}
+    </div>
+    <div class="inline-flex justify-start flex-grow">
+        <a href="/{{ type.buttonUrl }}" class="circularBtn rotate-again dark">{{ type.button | safe }}</a>
+    </div>
+</section>
+
+{% else %}
 
 <section class="container mx-auto px-4 sectionMargin flex flex-row justify-between flex-wrap gap-x-24 gap-y-4 {{ 'flex-row-reverse' if type.content.flip == 'true' }}">
     <div class="w-auto">
@@ -31,3 +67,5 @@
         <a href="/{{ type.buttonUrl }}" class="circularBtn dark">{{ type.button | safe }}</a>
     </div>
 </section>
+
+{% endif%}

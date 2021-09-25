@@ -48,12 +48,14 @@
     </ul>
 
     <div class="flex flex-row justify-center md:justify-between flex-wrap gap-x-8 gap-y-4 items-center mt-16 mx-auto">
-        <div>&copy; Lavean Services Ltd 2021</div>
+        <div>&copy; <span id="copyright">
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+    </span>&nbsp;&nbsp;Lavean Services Ltd</div>
         <div class="flex items-center gap-2">
-            <a href="https://moonface.digital" id="credit">
+            <a href="https://moonface.digital" class="credit">
                 Website by Moonface
             </a>
-            <img class="w-8 fill-ivory" src="/static/mf-ico.svg" alt="moonface logo">
+            <img class="w-8 text-ivory" src="/static/mf-ico.svg" alt="Moonface logo">
         </div>
     </div>
 </footer>

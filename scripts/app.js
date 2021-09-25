@@ -8,6 +8,8 @@ $(document).ready(function () {
     }
   }
 
+  // Slider functionality
+
   const siemas = document.querySelectorAll('.siema'); // allows for mutiple sliders on a page
 
   for (const siema of siemas) {
@@ -21,8 +23,6 @@ $(document).ready(function () {
       multipleDrag: true
     })
   }
-
-  // Slider functionality
 
   function sliderCursor() {
     const ball = document.querySelector(".dragVisual");
@@ -52,11 +52,6 @@ $(document).ready(function () {
     }
     animate();
 
-    document.addEventListener("mousemove", function (event) {
-      mouseX = event.pageX;
-      mouseY = event.pageY;
-    })
-
     document.querySelector('.dragVisual').classList.add("opacity-0-important");
 
     document.querySelector('.siema').addEventListener("mouseenter", function (event) {
@@ -69,6 +64,10 @@ $(document).ready(function () {
 
     document.querySelector('.sliderCont').addEventListener("mouseenter", function (event) {
       document.querySelector('.dragVisual').classList.add("on");
+      document.addEventListener("mousemove", function (event) {
+        mouseX = event.pageX;
+        mouseY = event.pageY;
+      })
     });
     document.querySelector('.sliderCont').addEventListener("mouseleave", function (event) {
       document.querySelector('.dragVisual').classList.remove("on");
@@ -78,30 +77,19 @@ $(document).ready(function () {
   sliderCursor();
 
 
-
-  document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-  document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
   // AJAX for all site forms
-  let form = document.querySelectorAll("form");
+  document.querySelectorAll("form").addEventListener("submit", handleSubmit);
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    fetch(form.getAttribute('action'), {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let myForm = document.querySelectorAll("form");
+    let formData = new FormData(myForm)
+    fetch('/', {
       method: 'POST',
-      headers: {
-        'Accept': 'Content-Type": "multipart/form-data',
-        'Content-Type': 'Content-Type": "multipart/form-data'
-      },
+      headers: { "Content-Type": "multipart/form-data" },
       body: new URLSearchParams(formData).toString()
-    })
-      .then(res => {
-        if (res) {
-          console.log("sumbit")
-        }
-      });
-  });
+    }).then(() => console.log('Submitted')).catch((error) =>
+      alert(error))
+  }
 
 });

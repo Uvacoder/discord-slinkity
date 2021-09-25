@@ -43,13 +43,13 @@ chunks:
         slideName: Ria Ria
         slideCompany: Sky inc.
       - slideQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         slideName: Alessa Alessa
         slideCompany: Water inc.
     heading: Client Stories
   - type: ctaBanner
-    template: chunks/cta-split.njk
+    flip: true
+    template: chunks/cta-banner.njk
     content:
       items:
         - type: imageList
@@ -61,4 +61,7 @@ chunks:
       subHeading: Trusted by the most renowned organizations
       flip: true
     button: Talk to us
+  - type: presetForm
+    template: chunks/form.njk
+    preset: true
 ---

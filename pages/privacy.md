@@ -109,6 +109,17 @@ chunks:
 
 
       We also encourage you to frequently check this page for any changes to our privacy policy. Your further use of our website after a change to our privacy policy will be subject to the updated policy.
-  - type: presetCtaBanner2
-    template: chunks/cta-split-2.njk
+  - type: ctaBanner
+    template: chunks/cta-banner.njk
+    content:
+      items:
+        - type: imageList
+          images:
+            - image: /static/standard-hotel-logo.svg
+              imageAlt: The Standard Hotel
+            - image: /static/old-vic-logo.svg
+              imageAlt: Bristol Old Vic
+      subHeading: Trusted by the most renowned organizations
+      flip: true
+    button: Talk to us
 ---

@@ -21,7 +21,7 @@
             }
             content.focus();
             window.scrollTo(0, 0);
-            document.body.classList.remove("opened");
+            document.body.classList.remove("nav__open");
             const siemas = document.querySelectorAll('.siema'); // allows for mutiple sliders on a page
             for (const siema of siemas) {
                 new Siema({

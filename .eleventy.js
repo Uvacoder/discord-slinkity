@@ -6,6 +6,7 @@ const { minify } = require("terser");
 const blogTools = require("eleventy-plugin-blog-tools");
 const { cache } = require('eleventy-plugin-workbox');
 const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug");
+const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
 
@@ -117,6 +118,9 @@ module.exports = function (eleventyConfig) {
 
   // Fix slugs
   eleventyConfig.addPlugin(pluginBetterSlug);
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
+  // Images
 
 
   return {

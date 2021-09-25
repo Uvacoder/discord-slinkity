@@ -8,9 +8,12 @@ section: contact
 date: 2018-01-01
 permalink: /contact/index.html
 chunks:
+  - type: presetForm
+    template: chunks/form.njk
+    preset: true
   - type: ctaBanner
-    flip: true
-    template: chunks/cta-split.njk
+    flip: false
+    template: chunks/cta-banner.njk
     content:
       subHeading: We are looking for talented people
       items:
