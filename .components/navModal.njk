@@ -1,6 +1,6 @@
 <div id="navModal" class="h-screen inset-0 bg-ivory fixed z-20 pt-20">
-  <div class="container h-full mx-auto px-4">
-    <div class="w-full h-full split items-center">
+  <div class="container h-full mx-auto px-4 overflow-auto">
+    <div class="w-full h-full navModalGrid items-center p-8">
       <ul id="modalLinks" class="w-full text-center">
         {% for link in nav.navLinks -%}
         <li>
@@ -74,10 +74,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  .split {
-    display: grid;
-    grid-template-rows: 1fr auto auto;
-  }
-</style>

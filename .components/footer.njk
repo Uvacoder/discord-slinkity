@@ -1,7 +1,8 @@
 <footer class="bg-lead mt-20 lg:mt-32 pb-20 text-ivory px-8 md:px-20 lg:px-32 dark-bg">
     <ul class="flex flex-row justify-between mt-12 gap-12 flex-wrap">
-<li class="h-20 lg:h-24 w-full lg:w-auto">
-        <img class="w-full h-full" src="/static/Lavean-noBg.svg" alt="">
+    
+ <li class="footerLogo">
+        <img class="flex-grow w-auto h-20 lg:h-24 py-1 md:py-0 -ml-4 lg:ml-0" src="/static/Lavean-noBg.svg" alt="Lavean logo">
 </li>
         <li class="max-w-[25ch]">
             <h2 class="mb-4">{{ footer.colOneHeading }}</h2>
@@ -59,3 +60,11 @@
         </div>
     </div>
 </footer>
+
+<style>
+    @media  (max-width: 896px) {
+        .footerLogo {
+            width: 100%;
+        }
+    }
+</style>

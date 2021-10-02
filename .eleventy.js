@@ -7,6 +7,57 @@ const blogTools = require("eleventy-plugin-blog-tools");
 const { cache } = require('eleventy-plugin-workbox');
 const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug");
 const yaml = require("js-yaml");
+const img2picture = require("eleventy-plugin-img2picture");
+const path = require("path");
+
+const img2pictureOptions = {
+  /*
+   * 🚨 Required parameters
+   */
+  eleventyInputDir: ".", // Should be same as Eleventy input folder set using `dir.input`.
+  imagesOutputDir: ".www/static", // Output folder for optimized images.
+  // URL prefix for images src URLS.
+  // It should match with path suffix in `imagesOutputDir`.
+  // Eg: imagesOutputDir with `_site/images` likely need urlPath as `/images/`
+  urlPath: "/static/",
+
+  /*
+   * 🔧 Optional parameters
+   */
+  extensions: ["jpg", "png", "jpeg"], // File extensions to optmize
+  // Formats to be generated.
+  // ⚠️ The <source> tags are ordered based on the order of formats
+  // in this array. Keep most compatible format at the end.
+  // The path of the last format will be populated in
+  // the 'src' attribute of fallback <img> tag.
+  formats: ["avif", "webp", "jpeg"],
+  sizes: "100vw", // Default image `sizes` attribute
+
+  minWidth: 150, // Minimum width to resize an image to
+  maxWidth: 1500, // Maximum width to resize an image to
+  widthStep: 150, // Width difference between each resized image
+
+  fetchRemote: true, // When true, remote images are fetched, cached and optimized.
+  dryRun: false, // When true, the optimized images are not generated. Only HTMLs are processed.
+
+  // Function used by eleventy-img to generate image filenames
+  filenameFormat: function (id, src, width, format) {
+    const extension = path.extname(src);
+    const name = path.basename(src, extension);
+
+    return `${name}-${id}-${width}w.${format}`;
+  },
+
+  // Cache options to pass to `eleventy-cache-assets`
+  cacheOptions: {},
+
+  // Extra options to pass to the Sharp constructor
+  sharpOptions: {},
+  sharpWebpOptions: {},
+  sharpPngOptions: {},
+  sharpJpegOptions: {},
+  sharpAvifOptions: {},
+};
 
 module.exports = function (eleventyConfig) {
 
@@ -84,6 +135,9 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Image processing
+  eleventyConfig.addPlugin(img2picture, img2pictureOptions);
+
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("static/");
   eleventyConfig.addPassthroughCopy("admin/");
@@ -91,6 +145,12 @@ module.exports = function (eleventyConfig) {
 
   if (process.env.NODE_ENV === 'production') {
     eleventyConfig.addPassthroughCopy({ './styles/_output.css': '/styles/tw.css' });
+  }
+  if (process.env.NODE === 'production') {
+    eleventyConfig.addPlugin(img2picture,);
+  } else {
+    // During development, you need to copy the files to `_site`
+    eleventyConfig.addPassthroughCopy("./images");
   }
 
   /* Markdown Plugins */

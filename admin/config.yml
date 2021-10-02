@@ -142,6 +142,22 @@ collections:
               - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
               - { label: Content, name: text, widget: markdown }
 
+          - label: 'Text & image'
+            name: 'textImage'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/text-image.njk' }
+              - { label: Content, name: text, widget: markdown }
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - {label: "Image", name: image, widget: image }
+                  - {label: "Caption", name: caption, widget: string, required: false }
+                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+                  - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right"}
+
+
 
           - label: 'CTA banner'
             name: 'ctaBanner'

@@ -9,97 +9,45 @@ chunks:
   - type: pageHeading
     template: chunks/page-title.njk
     heading: About us
-  - type: text
-    template: chunks/text.njk
+  - type: textImage
+    template: chunks/text-image.njk
+    flip: true
     text: >-
-      Leverage agile frameworks to provide a robust synopsis for high level
-      overviews. Iterative approaches to corporate strategy foster collaborative
-      thinking to further the overall value proposition. Organically grow the
-      holistic world view of disruptive innovation via workplace diversity and
-      empowerment.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum. 
 
 
-      Add a few line breaks in here to test:-
-
-      Capitalize\
-
-      on\
-
-      low\
-
-      hanging\
-
-      fruit  
-
-
-      ## Our services
-
-
-      Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    image:
+      image: /static/water-tank.jpg
+      caption: "hello world"
+      imageAlt: water tank
+  - type: ctaBanner
+    flip: false
+    template: chunks/cta-banner.njk
+    content:
+      subHeading: We are looking for talented people
+      items:
+        - type: text
+          text: >-
+            Due to a further influx of work, we are
+            actively recruiting and have a number of positions available.
 
 
-      ### Blue-sky thinking
+            * Commisioning engineer
+
+            * Contracts/account manager
+
+            * Water hygiene engineer
+
+            * Water treatment engineer
 
 
-      Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      #### Management frameworks
-
-
-      Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ##### Regulatory convergence
-
-
-      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ## Our services
-
-
-      Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Organically  grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ### Blue-sky thinking
-
-
-      Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      #### Management frameworks
-
-
-      Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ##### Regulatory convergence
-
-
-      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ## Our services
-
-
-      Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ### Blue-sky thinking
-
-
-      Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      #### Management frameworks
-
-
-      Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-
-      ##### Regulatory convergence
-
-
-      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+            If you have experience in any of these rolls within the water/air sectors please don’t hesitate to get in touch. Competitive rates of pay within a growing company. 
+    button: Join the team
 ---

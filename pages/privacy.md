@@ -110,6 +110,7 @@ chunks:
 
       We also encourage you to frequently check this page for any changes to our privacy policy. Your further use of our website after a change to our privacy policy will be subject to the updated policy.
   - type: ctaBanner
+    flip: true
     template: chunks/cta-banner.njk
     content:
       items:
@@ -120,6 +121,5 @@ chunks:
             - image: /static/old-vic-logo.svg
               imageAlt: Bristol Old Vic
       subHeading: Trusted by the most renowned organizations
-      flip: true
     button: Talk to us
 ---

@@ -9,7 +9,6 @@ $(document).ready(function () {
   }
 
   // Slider functionality
-
   const siemas = document.querySelectorAll('.siema'); // allows for mutiple sliders on a page
 
   for (const siema of siemas) {
@@ -78,18 +77,31 @@ $(document).ready(function () {
 
 
   // AJAX for all site forms
-  document.querySelectorAll("form").addEventListener("submit", handleSubmit);
+  function sendFormData() {
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let myForm = document.querySelectorAll("form");
-    let formData = new FormData(myForm)
-    fetch('/', {
-      method: 'POST',
-      headers: { "Content-Type": "multipart/form-data" },
-      body: new URLSearchParams(formData).toString()
-    }).then(() => console.log('Submitted')).catch((error) =>
-      alert(error))
+    function sendData() {
+      var XHR = new XMLHttpRequest()
+      var FD = new FormData(form)
+      XHR.addEventListener('load', function (event) {
+        form.classList.add('inactive')
+        var success = document.querySelectorAll('.success')[0]
+        success.classList.remove("hidden");
+      })
+      XHR.addEventListener('error', function (event) {
+        form.classList.add('inactive')
+        var error = document.querySelectorAll('.error')[0]
+        error.classList.remove("hidden");
+      })
+      XHR.open('POST', '#')
+      XHR.send(FD)
+    }
+
+    var form = document.querySelectorAll('form')[0]
+    form.addEventListener('submit', function (e) {
+      e.preventDefault()
+      sendData()
+    })
+
   }
-
+  sendFormData();
 });

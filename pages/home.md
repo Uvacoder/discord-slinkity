@@ -59,7 +59,6 @@ chunks:
             - image: /static/old-vic-logo.svg
               imageAlt: Bristol Old Vic
       subHeading: Trusted by the most renowned organizations
-      flip: true
     button: Talk to us
   - type: presetForm
     template: chunks/form.njk
