@@ -8,6 +8,7 @@ chunks:
     template: chunks/services-list.njk
     heading: Services
     button: View More
+    buttonUrl: services
     services:
       - serviceName: Water Treatment
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -60,6 +61,7 @@ chunks:
               imageAlt: Bristol Old Vic
       subHeading: Trusted by the most renowned organizations
     button: Talk to us
+    buttonUrl: contact
   - type: presetForm
     template: chunks/form.njk
     preset: true

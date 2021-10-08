@@ -50,30 +50,51 @@ $(document).ready(function () {
       requestAnimationFrame(animate);
     }
     animate();
-
-    document.querySelector('.dragVisual').classList.add("opacity-0-important");
-
-    document.querySelector('.siema').addEventListener("mouseenter", function (event) {
-      document.querySelector('.dragVisual').classList.add("active");
-      document.querySelector('.dragVisual').classList.add("opacity-0-important");
-    });
-    document.querySelector('.siema').addEventListener("mouseleave", function (event) {
-      document.querySelector('.dragVisual').classList.remove("active");
-    });
-
-    document.querySelector('.sliderCont').addEventListener("mouseenter", function (event) {
-      document.querySelector('.dragVisual').classList.add("on");
-      document.addEventListener("mousemove", function (event) {
-        mouseX = event.pageX;
-        mouseY = event.pageY;
-      })
-    });
-    document.querySelector('.sliderCont').addEventListener("mouseleave", function (event) {
-      document.querySelector('.dragVisual').classList.remove("on");
-    });
+    document.addEventListener("mousemove", function (event) {
+      mouseX = event.pageX;
+      mouseY = event.pageY;
+    })
   }
 
   sliderCursor();
+
+  document.querySelectorAll('.sliderCont').forEach(function (object) {
+    object.addEventListener("mouseleave", function (event) {
+      document.querySelectorAll('.dragVisual').forEach(function (element) {
+        element.style.display = "none";
+      });
+    });
+  });
+
+  document.querySelectorAll('.sliderCont').forEach(function (object) {
+    object.addEventListener("mouseenter", function (event) {
+      document.querySelectorAll('.dragVisual').forEach(function (element) {
+        element.style.display = "flex";
+      });
+    });
+  });
+
+  document.querySelectorAll('.siema').forEach(function (object) {
+    object.addEventListener("mouseleave", function (event) {
+      document.querySelectorAll('.dragVisual').forEach(function (element) {
+        element.style.opacity = "0";
+      });
+    });
+  });
+
+  document.querySelectorAll('.siema').forEach(function (object) {
+    object.addEventListener("mouseenter", function (event) {
+      document.querySelectorAll('.dragVisual').forEach(function (element) {
+        element.style.opacity = "1";
+      });
+    });
+  });
+  // Hide drag visual on scroll to avoid glitch
+  window.onscroll = function () {
+    document.querySelectorAll('.dragVisual').forEach(function (element) {
+      element.style.opacity = "0";
+    });
+  };
 
 
   // AJAX for all site forms

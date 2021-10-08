@@ -1,0 +1,24 @@
+<section class="container mx-auto px-4 sectionMargin clear-both">
+      {% if sgrid.heading %}
+          <div class="mx-auto px-10 md:px-4 mb-12">
+        <h1 class="text-center">{{ sgrid.heading | safe }}</h1>
+            </div>
+      {% endif %}
+    <div class="flex justify-center flex-wrap w-full gap-8">
+ {% for item in sgrid.services %}
+        <a href="" class="servicesCard flex-grow" style="flex-basis: 40%;">
+            <div class="h-[20ch] border-2 border-lead p-8 flex relative {{ 'w-full' if type.wide == true }}">
+                <div class="self-end">
+                    <h2 class="linkAnime z-10 max-w-[35ch] align-bottom table-cell">{{ item.serviceName | safe }}</h2>
+                    <p class="mt-4 max-w-[50ch] flex-shrink">{{ item.serviceDesc | safe }}</p>
+                </div>
+                <div class="absolute top-0 justify-self-end right-0 w-4/6 h-full"
+                    style="background-image: url('{{ item.serviceImg | safe }}'); background-size: cover; z-index: 1; opacity: 0.25; background-position: center; filter: brightness(80%);">
+                </div>
+            </div>
+        </a>
+
+{% endfor %}
+
+    </div>
+</section>

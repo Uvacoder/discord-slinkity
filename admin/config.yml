@@ -69,7 +69,7 @@ collections:
 
       - label: 'Form'
         name: 'presetForm'
-        file: "_data/presets/form.json"
+        file: "_data/form.yaml"
         widget: object
         fields:
           - { label: "Heading", name: "heading", widget: string, required: false }
@@ -108,6 +108,22 @@ collections:
                     name: type
                     widget: select
                     options: ["text", "email", "tel", "file"]
+
+      - label: 'Services Grid'
+        name: 'servicesGrid'
+        file: "_data/sgrid.yaml"
+        widget: object
+        fields:
+          - { label: Template, name: template, widget: hidden, default: 'chunks/services-grid.njk' }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - label: "Services"
+            label_singular: "Service"
+            name: "services"
+            widget: list
+            fields:
+              - {label: "Service Name", name: "serviceName", widget: string }
+              - {label: "Description", name: serviceDesc, widget: string }
+              - {label: "Image", name: serviceImg, widget: image }
 
      
   - name: "pages"
@@ -158,13 +174,34 @@ collections:
                   - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right"}
 
 
+          - label: 'Banner'
+            name: 'banner'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/banner.njk' }
+              - { label: Content, name: text, widget: markdown }
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - {label: "Image", name: image, widget: image }
+                  - {label: "Caption", name: caption, widget: string, required: false }
+                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+
+              - {label: "Flip layout", name: "flip", widget: "boolean", default: false, hint: "Positions content to the left and image to the right"}
+
 
           - label: 'CTA banner'
             name: 'ctaBanner'
             widget: object
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/cta-banner.njk' }
-              - { label: Button, name: button, widget: string, required: true, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
+              - label: "Button"
+                name: button
+                widget: object
+                fields:
+                  - { label: Button, name: button, widget: string, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
+                  - { label: Path, name: buttonUrl, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
               - label: "Content"
                 name: content
                 widget: object
@@ -193,7 +230,7 @@ collections:
                         fields:
                           - { label: Content, name: text, widget: markdown }
 
-                  - {label: "Flip layout", name: "flip", widget: "boolean", default: false, hint: "Positions content to the right and button to the left"}
+                  - {label: "Flip layout", name: "flip", widget: "boolean", default: false, hint: "Positions content to the right and button to the left", required: false}
 
           - label: 'Testimonials'
             name: 'testimonials'
@@ -238,6 +275,18 @@ collections:
                 fields:
                   - { label: Button, name: button, widget: string, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
                   - { label: Path, name: buttonUrl, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+
+          - label: "Services Grid"
+            name: "servicesGrid"
+            collapsed: true
+            summary: "Preset chunks can not be edited here"
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/services-grid.njk' }
+              - { label: Preset, name: preset, widget: hidden, default: 'true' }
+
+
 
           - label: 'Form'
             name: 'form'

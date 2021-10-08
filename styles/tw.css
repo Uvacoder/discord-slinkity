@@ -342,7 +342,29 @@
     }
 
     .credit:hover::after,
-    .credit:focus::after {
+    .credit:focus::after,
+    .linkAnime:hover::after,
+    .linkAnime:focus::after {
+        width: 100%;
+    }
+
+    .linkAnime {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .linkAnime::after {
+        content: '';
+        position: absolute;
+        bottom: -0.2em;
+        left: 0;
+        width: 70%;
+        height: 0.1em;
+        background-color: #121211;
+        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .servicesCard:hover .linkAnime::after {
         width: 100%;
     }
 
@@ -367,26 +389,11 @@
 
     .dragVisual {
         transform: translate(-50%, -50%);
-        transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1),
-                    scale 500ms cubic-bezier(0.4, 0, 1, 1);
-        scale: 0.2;
-    }
-
-    .opacity-0-important {
-        opacity: 0 !important;
-    }
-
-    .active.dragVisual {
-        opacity: 1;
-        scale: 1;
-    }
-
-    .on.dragVisual {
-        display: flex !important;
+        transition: opacity 70ms cubic-bezier(0.4, 0, 1, 1);
     }
 
     @media  (max-width: 768px) {
-        .active.dragVisual {
+        .dragVisual {
             display: none !important;
         }
     }
@@ -424,4 +431,10 @@
       /* Hamburger styles */
       .line{transition:opacity 20ms cubic-bezier(.4,0,.2,1);transform-origin:center left}.line1,.line2{transition:transform 20ms cubic-bezier(.4,0,.2,1)}.ham{transform:translateX(0);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:1}.cross{transform:translateX(-80%);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:0}.nav__open .ham{transform:translateX(100%);opacity:0}.nav__open .cross{transform:translateX(0);opacity:1}
 
+      @media (min-width: 1024px) { 
+          
+        .servicesCard {
+            flex-basis: 40%;
+        }
+       }
 }

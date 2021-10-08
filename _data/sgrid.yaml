@@ -1,0 +1,14 @@
+---
+services:
+  - serviceName: Environmental Services
+    serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    serviceImg: /static/water-tank.jpg
+  - serviceName: Legionella Testing
+    serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    serviceImg: /static/water-tank.jpg
+  - serviceName: Water Treatment
+    serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    serviceImg: /static/water-tank.jpg
