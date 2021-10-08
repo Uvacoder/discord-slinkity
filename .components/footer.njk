@@ -2,16 +2,16 @@
     <ul class="flex flex-row justify-between mt-12 gap-12 flex-wrap">
     
  <li class="footerLogo">
-        <img class="flex-grow w-auto h-20 lg:h-24 py-1 md:py-0 -ml-4 lg:ml-0" src="/static/Lavean-noBg.svg" alt="Lavean logo">
+        <img class="flex-grow w-auto h-20 lg:h-24 py-1 md:py-0 -ml-4 lg:ml-0" src="{{ footer.footerImg.image | safe }}" alt="{{ footer.footerImg.imageAlt | safe }}">
 </li>
         <li class="max-w-[25ch]">
-            <h2 class="mb-4">{{ footer.colOneHeading }}</h2>
+            <h2 class="mb-4">{{ footer.colOne.heading }}</h2>
 
             <ul class="leading-loose">
-                {% for item in footer.columnOne %}
+                {% for link in footer.colOne.links %}
                 <li>
-                    <a class="footer-item hover:opacity-70 ease-in duration-75" href="{{ item.url }}">{{
-                        item.displayText }}</a>
+                    <a class="footer-link capitalize hover:opacity-70 ease-in duration-75" href="/{{ link.path }}">{{
+                        link.text }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -19,13 +19,13 @@
         </li>
 
         <li class="max-w-[25ch]">
-            <h2 class="mb-4">{{ footer.colTwoHeading }}</h2>
+            <h2 class="mb-4">{{ footer.colTwo.heading }}</h2>
 
             <ul class="leading-loose">
-                {% for item in footer.columnTwo %}
+                {% for link in footer.colTwo.links %}
                 <li>
-                    <a class="footer-item hover:opacity-70 ease-in duration-75" href="{{ item.url }}">{{
-                        item.displayText }}</a>
+                    <a class="footer-link capitalize hover:opacity-70 ease-in duration-75" href="/{{ link.path }}">{{
+                        link.text }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -33,13 +33,13 @@
         </li>
 
         <li class="max-w-[25ch]">
-            <h2 class="mb-4">{{ footer.colThreeHeading }}</h2>
+            <h2 class="mb-4">{{ footer.colThree.heading }}</h2>
 
             <ul class="leading-loose">
-                {% for item in footer.columnThree %}
+                {% for link in footer.colThree.links %}
                 <li>
-                    <a class="footer-item hover:opacity-70 ease-in duration-75	" href="{{ item.url }}">{{
-                        item.displayText }}</a>
+                    <a class="footer-link capitalize hover:opacity-70 ease-in duration-75	" href="/{{ link.path }}">{{
+                        link.text }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -51,12 +51,12 @@
     <div class="flex flex-row justify-center md:justify-between flex-wrap gap-x-8 gap-y-4 items-center mt-16 mx-auto">
         <div>&copy; <span id="copyright">
         <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-    </span>&nbsp;&nbsp;Lavean Services Ltd</div>
+    </span>&nbsp;&nbsp;{{ footer.copyright }}</div>
         <div class="flex items-center gap-2">
             <a href="https://moonface.digital" class="credit">
                 Website by Moonface
             </a>
-            <img class="w-8 text-ivory" src="/static/mf-ico.svg" alt="Moonface logo">
+            <img class="w-8 text-ivory" src="/static/pwa/mf-ico.svg" alt="Moonface logo">
         </div>
     </div>
 </footer>

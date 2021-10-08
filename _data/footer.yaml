@@ -1,36 +1,42 @@
 ---
-colThreeHeading: Legal
-footerImg: "/static/mf-ico.svg"
-columnThree:
-- displayText: Privacy
-  url: "/privacy"
-- displayText: Modern Slavery Policy Statement
-  url: "/tos"
-- displayText: Equal Opportunity & Diversity Policy
-  url: "/our-statement-on-free-speech"
-- displayText: Quality Policy Statement
-  url: "/ethical-design"
-- displayText: Health Safety and Environment Policy Statement
-  url: "/health-and-saftey"
-- displayText: Brexit Update
-  url: "/brexit"
-columnOne:
-- displayText: Services
-  url: "/services"
-- displayText: Case Studies
-  url: "/case-studies"
-- displayText: Contact
-  url: "/contact"
-- displayText: About
-  url: "/about"
-columnTwo:
-- displayText: Sectors
-  url: "/sectors"
-- displayText: Responsibility
-  url: "/responsibility"
-- displayText: Careers
-  url: "/careers"
-- displayText: Coverage
-  url: "/coverage"
-colTwoHeading: Company
-colOneHeading: Site
+footerImg:
+  image: /static/Lavean-noBg.svg
+  imageAlt: Lavean Logo
+colOne:
+  heading: Site
+  links:
+    - text: services
+      path: services
+    - text: Case Studies
+      path: case-studies
+    - text: Contact
+      path: contact
+    - text: About
+      path: about
+colTwo:
+  heading: Company
+  links:
+    - text: Sectors
+      path: sectors
+    - text: Responsibility
+      path: responsibility
+    - text: Careers
+      path: careers
+    - text: Coverage
+      path: coverage
+colThree:
+  heading: Legal
+  links:
+    - text: Privacy
+      path: privacy
+    - text: Modern Slavery Policy Statement
+      path: modern-slavery-policy-statement
+    - text: Equal Opportunity & Diversity Policy
+      path: equal-opportunity-diversity-policy
+    - text: Quality Policy Statement
+      path: quality-policy-statement
+    - text: Health Safety and Environment Policy Statement
+      path: health-safety-environment-policy-statement
+    - text: Brexit Update
+      path: brexit
+copyright: Lavean Services Ltd

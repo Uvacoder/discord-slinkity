@@ -22,7 +22,7 @@ collections:
       preview: false
     files: 
      - label: SEO and metadata
-       file: "_data/site.json"
+       file: "_data/site.yaml"
        name: "metadata"
        fields:
          - { label: Default title, name: title, widget: string, hint: "Default title for all pages" }
@@ -37,7 +37,7 @@ collections:
     files: 
 
      - label: Navigation
-       file: "_data/nav.json"
+       file: "_data/nav.yaml"
        name: "navigation"
        fields:
          - label: "Logo"
@@ -47,7 +47,7 @@ collections:
              - {label: "Image", name: image, widget: image, required: false }
              - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
          - label: "Links"
-           name: Links
+           name: links
            widget: list
            max: 3
            fields:
@@ -59,6 +59,55 @@ collections:
            fields:
              - {label: "Text", name: text, widget: string }
              - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+
+
+     - label: Footer
+       file: "_data/footer.yaml"
+       name: "footer"
+       fields:
+         - label: "Logo"
+           name: footerImg
+           widget: object
+           fields:
+             - {label: "Image", name: image, widget: image, required: false }
+             - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+         - label: "Column One"
+           name: "colOne"
+           widget: object
+           fields:
+             - {label: "Heading", name: heading, widget: string }
+             - label: "Links"
+               label_singular: "Link"
+               name: links
+               widget: list
+               fields:
+                 - {label: "Text", name: text, widget: string }
+                 - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - label: "Column Two"
+           name: "colTwo"
+           widget: object
+           fields:
+             - {label: "Heading", name: heading, widget: string }
+             - label: "Links"
+               label_singular: "Link"
+               name: links
+               widget: list
+               fields:
+                 - {label: "Text", name: text, widget: string }
+                 - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - label: "Column Three"
+           name: "colThree"
+           widget: object
+           fields:
+             - {label: "Heading", name: heading, widget: string }
+             - label: "Links"
+               label_singular: "Link"
+               name: links
+               widget: list
+               fields:
+                 - {label: "Text", name: text, widget: string }
+                 - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - {label: "Copyright", name: copyright, widget: string, hint: "Date shown will change automatically" }
 
   - name: "presets"
     label: "Presets"
