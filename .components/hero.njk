@@ -1,29 +1,37 @@
-<div class="hidden xl:block h-screen min-h-[800px] w-full bg-lead relative -mt-32 lg:-mt-44 mb-12 lg:mb-24">
-    <div class="grid place-items-center w-full h-full absolute pointer-events-none mt-4">
-        <img class="block w-[45%] opacity-30 pointer-events-none" src="/static/eclipse.svg" alt="Eclipse">
+<div class="hidden h-auto lg:block lg:h-screen lg:min-h-[800px] w-full bg-lead relative -mt-8 lg:-mt-44 mb-12 lg:mb-24">
+    <div class="hidden lg:grid place-items-center w-full h-full absolute pointer-events-none" style="z-index: 2;">
+        <img class="w-[42%] opacity-30 pointer-events-none" src="/static/eclipse.svg" alt="Eclipse">
     </div>
-    <div class="container mx-auto relative bg-lead">
-        <div class="md:grid md:place-items-center md:w-full md:h-full md:absolute flex justify-center">
-            <img class="block xl:hidden absolute w-3/4 opacity-30 pointer-events-none self-start mt-36 lg:mt-48"
-                src="/static/water-tank.jpg" alt="water tank">
-        </div>
-        <div class="px-4 grid grid-areas-heroSlim xl:grid-areas-hero absolute mt-32 lg:mt-44">
-            <h1 class="text-ivory uppercase grid-in-text max-w-[18ch] xl:w-[11ch] leading-tight"><i>High Quality
-                </i>water treatment
-                for <i>your </i>business
+    <div class="container flex flex-col lg:flex-row justify-between lg:items-center relative px-4 mx-auto h-full w-full"
+        style="z-index: 3;">
+        <div class="">
+            <h1 class="text-ivory uppercase max-w-[18ch] lg:w-[11ch] leading-tight">{{ hero.text | markdownify | safe }}
             </h1>
-            <div class="inline-block row-start-btn">
-                <a href="/contact" class="primaryBtn mt-4">Contact us</a>
+            <div class="inline-block">
+                <a href="/{{ hero.cta.path | safe}}" class="primaryBtn mt-4 mb-12">{{ hero.cta.text | safe}}</a>
             </div>
-            <div class="w-3/4 self-center justify-self-end">
-                <img src="/static/water-tank.jpg" alt="Water tank">
+        </div>
+        <div class="justify-between heroImg absolute lg:relative inset-0">
+            <div class="heroContent w-5/6 h-auto mx-auto lg:mx-0 lg:w-[33.33vw] lg:h-[25vw] lg:min-h-[300px]">
+                {% if hero.heroContent.image %}
+                <img class="w-full h-full opacity-70 object-cover" src="{{ hero.heroContent.image.image | safe }}"
+                    alt="{{ hero.heroContent.image.imageAlt | safe }}">
+                {% endif %}
+
+                {% if hero.heroContent.video %}
+                <video class="w-full h-full opacity-60 object-cover relative" autoplay loop muted preload="none">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {% endif %}
             </div>
-            <div class="mt-4 text-right text-ivory max-w-[50ch] justify-self-end">
-                <h3><i>"Lavean is a brilliant company that did many great things for my equally great company."</i>
-                </h3>
-                <p class="text-sm tracking-tight font-light leading-none mt-4">Johnathan Johnathan, hello inc.</p>
-            </div>
-            <div></div>
+            {% if hero.heroContent.imageList %}
+            <ul class="flex justify-end flex-wrap max-w-[33.33vw] list-none gap-8">
+                {% for image in hero.heroContent.imageList.images -%}
+                <li><img class="h-16" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}"></li>
+                {% endfor -%}
+            </ul>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -33,16 +41,24 @@
 <div class="block xl:hidden h-auto w-full bg-lead -mt-8 lg:-mt-12 pt-8 pb-12 relative mb-20 lg:mb-32">
     <div class="container mx-auto px-4 relative" id="mobileHero">
         <div class="flex flex-col relative z-10">
-            <h1 class="inline-block text-ivory uppercase max-w-[18ch] xl:w-[11ch] leading-tight"><i>High Quality
-                </i>water treatment
-                for <i>your </i>business
+            <h1 class="inline-block text-ivory uppercase max-w-[18ch] xl:w-[11ch] leading-tight">{{ hero.text |
+                markdownify | safe }}
             </h1>
             <div class="inline-block">
-                <a href="/contact" class="primaryBtn mt-4">Contact us</a>
+                <a href="/{{ hero.cta.path | safe}}" class="primaryBtn mt-4">{{ hero.cta.text | safe}}</a>
             </div>
         </div>
+        {% if hero.heroContent.image %}
         <div class="absolute inset-0 m-8 -mt-4 opacity-30 overflow-hidden">
-        <img src="/static/water-tank.jpg" alt="Water tank">
+            <img src="{{ hero.heroContent.image.image | safe }}" alt="{{ hero.heroContent.image.imageAlt | safe }}">
         </div>
+        {% endif %}
     </div>
+    {% if hero.heroContent.imageList %}
+    <ul class="flex justify-center w-full list-none gap-4 md:gap-8 noPadding opacity-30 mt-8">
+        {% for image in hero.heroContent.imageList.images -%}
+        <li><img class="h-12 md:h-16" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}"></li>
+        {% endfor -%}
+    </ul>
+    {% endif %}
 </div>

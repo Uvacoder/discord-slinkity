@@ -1,0 +1,14 @@
+text: "*HIGH QUALITY* WATER TREATMENT FOR *YOUR* BUSINESS"
+cta:
+  text: Contact Us
+  path: contact
+heroContent:
+  image:
+    image: /static/water-tank.jpg
+    imageAlt: water tank
+  imageList:
+    images:
+      - image: /static/safecontractor-logo-light.svg
+        imageAlt: safe contractor logo
+      - image: /static/wms-logo-light.svg
+        imageAlt: water management society logo

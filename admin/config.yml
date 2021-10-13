@@ -60,6 +60,43 @@ collections:
              - {label: "Text", name: text, widget: string }
              - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
 
+     - label: Hero
+       file: "_data/hero.yaml"
+       name: "hero"
+       fields:
+         - {label: "Text", name: text, widget: markdown, hint: "Although you can change this, we recommend you don't as it is a fundamental element. [Learn more](https://moonface.digital/support/titan#fundamental-elements)" }
+         - label: "Button"
+           name: cta
+           widget: object
+           fields:
+             - {label: "Text", name: text, widget: string }
+             - {label: "Path", name: path, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
+         - label: "Content"
+           name: heroContent
+           widget: object
+           fields:
+             - label: "Image"
+               name: image
+               widget: object
+               fields:
+                 - {label: "Image", name: image, widget: image, required: false }
+                 - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+             - {label: "Video", name: video, widget: file, required: false }
+             - label: Image list
+               name: "imageList"
+               widget: object
+               create: true
+               collapsed: true
+               fields:
+                 - label: images
+                   label_singular: Image
+                   name: images
+                   widget: list
+                   fields:
+                     - {label: "Image", name: image, widget: image }
+                     - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
+
+
 
      - label: Footer
        file: "_data/footer.yaml"

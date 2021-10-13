@@ -9,13 +9,6 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     mode: 'jit',
     theme: {
-        gridTemplateAreas: {
-            'hero': [
-                'text img',
-                'btn .',
-                '. quote',
-            ],
-        },
         fontWeight: {
             hairline: 100,
             thin: 200,
@@ -51,8 +44,7 @@ module.exports = {
                 'hover::after',
                 'focus::before'
             ],
-        },
-        gridTemplateAreas: ['responsive']
+        }
     },
     corePlugins: {
         container: false
@@ -76,7 +68,6 @@ module.exports = {
                     },
                 }
             })
-        },
-        require('@savvywombat/tailwindcss-grid-areas')
+        }
     ],
 }

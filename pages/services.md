@@ -24,6 +24,9 @@ chunks:
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         serviceImg: /static/water-tank.jpg
+  - type: presetForm
+    template: chunks/form.njk
+    preset: true
   - type: ctaBanner
     flip: true
     template: chunks/cta-banner.njk

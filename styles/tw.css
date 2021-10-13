@@ -431,10 +431,26 @@
       /* Hamburger styles */
       .line{transition:opacity 20ms cubic-bezier(.4,0,.2,1);transform-origin:center left}.line1,.line2{transition:transform 20ms cubic-bezier(.4,0,.2,1)}.ham{transform:translateX(0);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:1}.cross{transform:translateX(-80%);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:0}.nav__open .ham{transform:translateX(100%);opacity:0}.nav__open .cross{transform:translateX(0);opacity:1}
 
-      @media (min-width: 1024px) { 
-          
+      @media (min-width: 1024px) {  
         .servicesCard {
             flex-basis: 40%;
         }
        }
+       .heroImg::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(-90deg, #121211 0%, #121211 30.33%, #121211 60.699999999999996%, rgba(18, 18, 17, 0) 100%);
+        width: 30vw;
+        height: calc(100% + 20vh);
+        margin-top: -10vh;
+        z-index: -1;
+        left: 0;
+        margin-left: -12vw;
+    }
+
+    @media (max-width: 1024px) {
+        .heroImg::before {
+            display: none;
+        }
+    }
 }

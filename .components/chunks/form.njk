@@ -37,7 +37,7 @@
                 {% for field in form.form.fields %}
                 <div class="w-full xl:flex-1 xl:min-w-[45%]">
                     <label>{{ field.label | safe }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
-                            type="{{ field.type }}" name="{{ field.name }}" /></label>
+                            type="{{ field.type }}" name="{{ field.name }}" required/></label>
                 </div>
                 {% endfor %}
                 </div>
@@ -100,7 +100,7 @@
                 {% for field in type.form.fields %}
                 <div class="w-full xl:flex-1 xl:min-w-[45%]">
                     <label>{{ field.label | safe }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
-                            type="{{ field.type }}" name="{{ field.name }}" /></label>
+                            type="{{ field.type }}" name="{{ field.name }}" required /></label>
                 </div>
                 {% endfor %}
                 </div>
