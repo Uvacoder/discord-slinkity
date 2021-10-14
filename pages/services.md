@@ -9,8 +9,8 @@ chunks:
   - type: pageHeading
     template: chunks/page-title.njk
     heading: Here's what we do
-  - type: servicesGrid
-    template: chunks/services-grid.njk
+  - type: grid
+    template: chunks/grid.njk
     services:
       - serviceName: Environmental Services
         serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do

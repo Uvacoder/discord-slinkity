@@ -26,7 +26,7 @@
                 {% endif %}
             </div>
             {% if hero.heroContent.imageList %}
-            <ul class="flex justify-end flex-wrap max-w-[33.33vw] list-none gap-8">
+            <ul class="flex justify-end flex-wrap max-w-[33.33vw] list-none gap-8 opacity-30">
                 {% for image in hero.heroContent.imageList.images -%}
                 <li><img class="h-16" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}"></li>
                 {% endfor -%}
