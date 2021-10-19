@@ -17,5 +17,16 @@
             {{ type.text | markdownify | safe }}
         </div>
 {% endif %}
+{% if type.imageList %}
+
+        <ul class="flex flex-wrap list-none gap-4 mt-12 noPadding">
+        {% for image in type.images -%}
+            <li class="h-10 inline">
+                <img class="w-full h-full" width="100%" height="100%" src="{{ image.image | safe }}" alt="{{ image.imageAlt | safe }}">
+            </li>
+         {% endfor -%}
+        </div>
+
+        {% endif %}
     </div>
 </section>
