@@ -1141,7 +1141,6 @@
     }
 
     .css-dxc55w-TopBar-StyledListItemTopBar-StyledListItemTopBar {
-      border-radius: 0 5px 0 0 !important;
       background-color: var(--black) !important;
       border: 2px solid var(--less-dark) !important;
       border-bottom: none !important;
@@ -1308,6 +1307,118 @@
       color: var(--white) !important
     }
 
+    .css-n3v41w-control {
+      background-color: var(--black) !important;
+      color: var(--lighter) !important;
+      border-radius: 0 !important
+    }
+
+    .css-1uccc91-singleValue {
+      color: var(--lighter) !important
+    }
+
+    .css-1gak1b1-indicatorContainer,
+    .css-1rk49bx-indicatorContainer {
+      color: var(--reddish) !important;
+      cursor: pointer !important
+    }
+
+    .css-d5zfyc-control {
+      color: var(--white) !important;
+      background-color: var(--black) !important
+    }
+
+    .css-11unzgr {
+      border: 1px solid var(--less-dark);
+      cursor: pointer;
+      border-radius: 3px;
+      background-color: var(--black) !important;
+      color: var(--white)
+    }
+
+    .css-1sqg7rp-option {
+      background-color: var(--black) !important
+    }
+
+    .css-11unzgr>div::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: .5em !important;
+      height: .5em !important;
+      border-radius: 100% !important;
+      margin-left: .3em !important;
+      background-color: var(--reddish) !important
+    }
+
+    .css-11unzgr>div:active,
+    .css-11unzgr>div:hover {
+      background-color: var(--dark) !important
+    }
+
+    .css-u267yo-option {
+      background-color: inherit !important
+    }
+
+    .css-1jk3wxh-Suggestions {
+      border: 1px solid var(--less-dark);
+      border-radius: 3px;
+      background-color: var(--black) !important;
+      color: var(--white)
+    }
+
+    .css-1yqlw4e-SuggestionHeader {
+      color: var(--more-light) !important
+    }
+
+    .e10zyk1w6 {
+      background-color: var(--black) !important
+    }
+
+    .e10zyk1w6:hover {
+      background-color: var(--dark) !important
+    }
+
+    .css-160peyb-SuggestionItem {
+      background-color: var(--black) !important
+    }
+
+    .css-160peyb-SuggestionItem::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: .5em !important;
+      height: .5em !important;
+      border-radius: 100% !important;
+      margin-left: .3em !important;
+      background-color: var(--reddish) !important
+    }
+
+    .css-sg6m66-SuggestionDivider {
+      background-color: var(--lighter) !important
+    }
+
+    .modalContainer::before {
+      background-color: #111 !important
+    }
+
+    .modalContainer {
+      display: none !important
+    }
+
+    @media (min-width:480px) {
+      .modalContainer::before {
+        background-color: #111 !important
+      }
+    }
+
+    .modalContent {
+      border: 1px solid #333 !important;
+      border-radius: 3px !important;
+      background-color: #000 !important;
+      color: #fff !important
+    }
+
     @media (min-width:1000px) {
       .mobileHide {
         display: none !important
@@ -1315,7 +1426,7 @@
     }
 
     .mobileHide {
-      display: grid;
+      display: none;
       place-content: center;
       width: 100%;
       height: 100%;
