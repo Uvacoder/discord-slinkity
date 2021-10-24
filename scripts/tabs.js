@@ -152,13 +152,6 @@
                 });
             });
         });
-
-        // Hide drag visual on scroll to avoid glitch
-        window.onscroll = function () {
-            document.querySelectorAll('.dragVisual').forEach(function (element) {
-                element.style.opacity = "0";
-            });
-        };
     }
 
 

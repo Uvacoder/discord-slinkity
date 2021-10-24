@@ -32,16 +32,14 @@ chunks:
     flip: false
     text: >-
       ## We know you want someone you can trust..
-
-
-      <ul class="flex gap-x-4 flex-wrap list-none" style="padding-left: 0px;">
-      <li>
-          <img style="height: 4rem" src="/static/wms-logo-light.svg">
-      <li>
-      <li>
-          <img style="height: 4rem" src="/static/safecontractor-logo-light.svg">
-      <li>
-      </ul>
+    image:
+      caption: Hello world
+    imageList:
+      images:
+        - image: /static/safecontractor-logo-light.svg
+          imageAlt: safe contractor logo
+        - image: /static/wms-logo-light.svg
+          imageAlt: water management society logo
   - type: ctaBanner
     flip: false
     template: chunks/cta-banner.njk

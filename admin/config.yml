@@ -16,6 +16,8 @@ collections:
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
+    editor:
+       preview: false
     folder: "pages"
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
@@ -58,7 +60,7 @@ collections:
                   - {label: "Image", name: image, widget: image }
                   - {label: "Caption", name: caption, widget: string, required: false }
                   - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
-                  - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right"}
+                  - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right", required: false}
 
 
           - label: 'Banner'
@@ -231,6 +233,8 @@ collections:
   - name: "components"
     label: "Components"
     label_singular: "Component"
+    editor:
+       preview: false
     files: 
 
      - label: Navigation
@@ -346,6 +350,8 @@ collections:
   - name: "presets"
     label: "Presets"
     label_singular: "Preset"
+    editor:
+       preview: false
     description: >
       Reusable chunks you can add to your pages.
     files: 
@@ -412,10 +418,10 @@ collections:
   - name: "settings"
     label: "Settings"
     label_singular: "Setting"
+    editor:
+       preview: false
     description: >
       Careful.. changing these settings could have unwanted effects.
-    editor:
-      preview: false
     files: 
      - label: SEO and metadata
        file: "_data/site.yaml"

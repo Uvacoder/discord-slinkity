@@ -89,40 +89,23 @@ $(document).ready(function () {
       });
     });
   });
-  // Hide drag visual on scroll to avoid glitch
-  window.onscroll = function () {
-    document.querySelectorAll('.dragVisual').forEach(function (element) {
-      element.style.opacity = "0";
-    });
-  };
 
 
   // AJAX for all site forms
-  function sendFormData() {
-
-    function sendData() {
-      var XHR = new XMLHttpRequest()
-      var FD = new FormData(form)
-      XHR.addEventListener('load', function (event) {
-        form.classList.add('inactive')
-        var success = document.querySelectorAll('.success')[0]
-        success.classList.remove("hidden");
-      })
-      XHR.addEventListener('error', function (event) {
-        form.classList.add('inactive')
-        var error = document.querySelectorAll('.error')[0]
-        error.classList.remove("hidden");
-      })
-      XHR.open('POST', '#')
-      XHR.send(FD)
-    }
-
-    var form = document.querySelectorAll('form')[0]
-    form.addEventListener('submit', function (e) {
-      e.preventDefault()
-      sendData()
+  $("form").submit(function () {
+    var thistarget = this.target;
+    jQuery.ajax({
+      data: $(this).serialize(),
+      url: this.action,
+      type: this.method,
+      error: function () {
+        $(thistarget).html("Error: Failed to submit form!");
+      },
+      success: function (results) {
+        $(thistarget).html(results);
+      }
     })
-
+    return false;
   }
-  sendFormData();
+  );
 });
