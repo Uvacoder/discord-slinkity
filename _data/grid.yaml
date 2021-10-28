@@ -1,14 +1,22 @@
----
 items:
   - itemName: Environmental services
     itemDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
     itemImg: /static/water-tank.jpg
+    itemeDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed
+      do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    path: services/environmental-services
   - itemName: Legionella Testing
     itemDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
     itemImg: /static/water-tank.jpg
+    itemeDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed
+      do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    path: services/legionella-testing
   - itemName: Water Treatment
     itemDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
     itemImg: /static/water-tank.jpg
+    itemeDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed
+      do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    path: services/water-treatment
