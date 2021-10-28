@@ -103,8 +103,8 @@ $(document).ready(function () {
         body: new URLSearchParams(formData).toString()
       }).then(() => ntlFormSuccess()).catch((error) =>
         alert(error))
-
       return false;
+
     });
 
     function ntlFormSuccess() {
