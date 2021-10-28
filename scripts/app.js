@@ -95,7 +95,6 @@ $(document).ready(function () {
 
   document.querySelectorAll('.ntlForm').forEach(function (form) {
     form.addEventListener('submit', (event) => {
-      return false;
       event.preventDefault()
       let formData = new FormData(form)
       fetch('/', {
@@ -111,6 +110,8 @@ $(document).ready(function () {
       console.log("form submitted")
       form.reset();
     }
+
+    return false;
   });
 
 
