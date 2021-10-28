@@ -14,12 +14,12 @@
         <div class="justify-between heroImg absolute lg:relative inset-0">
             <div class="heroContent w-5/6 h-auto mx-auto lg:mx-0 lg:w-[33.33vw] lg:h-[25vw] lg:min-h-[300px]">
                 {% if hero.heroContent.image %}
-                <img class="w-full h-full opacity-70 object-cover" src="{{ hero.heroContent.image.image | safe }}"
+                <img class="w-full h-full opacity-80 object-cover" src="{{ hero.heroContent.image.image | safe }}"
                     alt="{{ hero.heroContent.image.imageAlt | safe }}">
                 {% endif %}
 
                 {% if hero.heroContent.video %}
-                <video class="w-full h-full opacity-60 object-cover relative" autoplay loop muted preload="none">
+                <video class="w-full h-full opacity-80 object-cover relative" autoplay loop muted preload="none">
                     <source src="" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

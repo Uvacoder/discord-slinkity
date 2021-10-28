@@ -266,6 +266,16 @@
       -webkit-tap-highlight-color: #cd7b2928;
     }
 
+    ::-moz-selection {
+        background-color: #cd7b2972;
+      }
+      ::selection  {
+        background-color: #cd7b2972;
+      }
+      ::-webkit-selection {
+        background-color: #cd7b2972;
+      }
+
     html * {
         scroll-margin-top: 17rem;
     }
@@ -404,8 +414,9 @@
     }
 
     img {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
       }
 
       .nav__open #navModal {

@@ -92,20 +92,34 @@ $(document).ready(function () {
 
 
   // AJAX for all site forms
-  $("form").submit(function () {
-    var thistarget = this.target;
-    jQuery.ajax({
-      data: $(this).serialize(),
-      url: this.action,
-      type: this.method,
-      error: function () {
-        $(thistarget).html("Error: Failed to submit form!");
-      },
-      success: function (results) {
-        $(thistarget).html(results);
+
+  document.querySelectorAll('.ntlForm').forEach(function (form) {
+    form.addEventListener('submit', (event) => {
+
+      // disable default action
+      event.preventDefault();
+
+      // configure a request
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/');
+
+      // prepare form data
+      let data = new FormData(form);
+
+      // set headers
+      xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+      // send request
+      xhr.send(data);
+
+      // listen for `load` event
+      xhr.onload = () => {
+        console.log(xhr.responseText);
       }
-    })
-    return false;
-  }
-  );
+
+    });
+  });
+
+
 });

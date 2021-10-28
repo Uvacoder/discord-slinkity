@@ -8,21 +8,22 @@
     <div class="flex flex-col justify-center lg:flex-row gap-8">
         {% if form.content %}
         <div class="w-full lg:w-1/2 gap-y-8 flex flex-col justify-between">
-                <div>
+            <div>
                 {% if form.content.text %}
                 <div class="text-lead mb-8">
-                  {{ form.content.text | markdownify | safe}}
+                    {{ form.content.text | markdownify | safe}}
                 </div>
                 {% endif %}
                 <div class="flex gap-x-8 flex-wrap">
                     {% for contact in form.content.contacts %}
                     <div class="flex flex-col">
                         <h2>{{ contact.name | safe }}</h2>
-                        <div href="tel:+44 0179312345">{{ contact.contact | safe }}</div>
+                        <div>{{ contact.contact | safe }}</div>
                     </div>
                     {% endfor %}
                 </div>
-            {% if form.content.image %}</div>
+                {% if form.content.image %}
+            </div>
             <div class="w-5/6 mx-auto lg:mx-0">
                 <img src="{{ form.content.image.image }}" class="w-full h-full" alt="{{ form.content.image.imageAlt }}">
             </div>
@@ -31,25 +32,27 @@
         {% endif %}
 
         <div id="submitted" class="w-full lg:w-1/2 border-2 border-lead p-4 md:p-8">
-            <form name="{{ form.form.formName}}" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="#submitted" class="flex flex-col gap-y-4 justify-between h-full">
+            <form name="{{ form.form.formName}}" data-netlify="true" data-netlify-honeypot="bot-field"
+                 class="ntlForm flex flex-col gap-y-4 justify-between h-full">
                 <input type="hidden" name="bot-field" />
-<div class="flex flex-wrap gap-4 justify-between">
-                {% for field in form.form.fields %}
-                <div class="w-full xl:flex-1 xl:min-w-[45%]">
-                    <label>{{ field.label | safe }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
-                            type="{{ field.type }}" name="{{ field.name }}" required/></label>
-                </div>
-                {% endfor %}
+                <div class="flex flex-wrap gap-4 justify-between">
+                    {% for field in form.form.fields %}
+                    <div class="w-full xl:flex-1 xl:min-w-[45%]">
+                        <label>{{ field.label | safe }}<br> <input
+                                class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
+                                type="{{ field.type }}" name="{{ field.name }}" required /></label>
+                    </div>
+                    {% endfor %}
                 </div>
                 <div class="relative">
                     <label>Message<br><textarea class="w-full h-48 mt-2 border-2 border-lead bg-transparent p-2"
                             name="messsage"></textarea></label>
                 </div>
-                                <div class="success hidden">
-                Thanks for your message
+                <div class="successNoti hidden">
+                    Thanks for your message
                 </div>
-                <div class="error text-red-500 hidden">
-                Something went wrong.. get in touch and let us know what happened
+                <div class="failedNoti text-red-500 hidden">
+                    Something went wrong.. get in touch and let us know what happened
                 </div>
                 <div class="flex justify-end">
                     <button type="submit" class="primaryBtn dark mt-8 relative bottom-0 right-0">Send</button>
@@ -61,6 +64,8 @@
 
 {% else %}
 
+
+
 <section class="clear-both container mx-auto px-4 sectionMargin">
     <div class="mx-auto px-10 md:px-4 mb-12">
         {% if type.heading %}
@@ -70,10 +75,10 @@
     <div class="flex flex-col justify-center lg:flex-row gap-8">
         {% if type.content %}
         <div class="w-full lg:w-1/2 gap-y-8 flex flex-col justify-between">
-        <div>
+            <div>
                 {% if type.content.text %}
                 <div class="text-lead mb-8">
-                  {{ type.content.text | markdownify | safe}}
+                    {{ type.content.text | markdownify | safe}}
                 </div>
                 {% endif %}
                 <div class="flex gap-x-8 flex-wrap">
@@ -94,25 +99,27 @@
         {% endif %}
 
         <div id="submitted" class="w-full lg:w-1/2 border-2 border-lead p-8">
-            <form name="{{ type.form.formName}}" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="#submitted" class="flex flex-col gap-y-4 justify-between h-full">
+            <form name="{{ type.form.formName}}" data-netlify="true" data-netlify-honeypot="bot-field"
+                 class="ntlForm flex flex-col gap-y-4 justify-between h-full">
                 <input type="hidden" name="bot-field" />
-<div class="flex flex-wrap gap-4 justify-between">
-                {% for field in type.form.fields %}
-                <div class="w-full xl:flex-1 xl:min-w-[45%]">
-                    <label>{{ field.label | safe }}<br> <input class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
-                            type="{{ field.type }}" name="{{ field.name }}" required /></label>
-                </div>
-                {% endfor %}
+                <div class="flex flex-wrap gap-4 justify-between">
+                    {% for field in type.form.fields %}
+                    <div class="w-full xl:flex-1 xl:min-w-[45%]">
+                        <label>{{ field.label | safe }}<br> <input
+                                class="w-full mt-2 bg-lead border-2 border-lead bg-transparent p-2"
+                                type="{{ field.type }}" name="{{ field.name }}" required /></label>
+                    </div>
+                    {% endfor %}
                 </div>
                 <div class="relative">
                     <label>Message<br><textarea class="w-full h-48 mt-2 border-2 border-lead bg-transparent p-2"
                             name="messsage"></textarea></label>
                 </div>
-                <div class="success">
-                Thanks for your message
+                <div class="successNoti hidden">
+                    Thanks for your message
                 </div>
-                <div class="error text">
-                Something went wrong <a class="underline ">Report issue</a>
+                <div class="failedNoti text-red-500 hidden">
+                    Something went wrong.. get in touch and let us know what happened
                 </div>
                 <div class="flex justify-end">
                     <button type="submit" class="primaryBtn dark mt-8 relative bottom-0 right-0">Send</button>
@@ -125,4 +132,4 @@
 
 <script>
 
-  </script>
+</script>
