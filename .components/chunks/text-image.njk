@@ -5,6 +5,9 @@
 <figcaption><p class="text-sm tracking-tight leading-none mt-2 {{ 'md:text-right' if type.flip == true }}">{{ type.image.caption | safe}}</p></figcaption>
 {% endif %}
 </figure>
+<div class="text-justify">
 {{ type.text | markdownify | safe }}
+
+</div>
 </div>
 </section>

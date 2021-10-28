@@ -23,6 +23,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "[Learn more](https://moonface.digital/support/titan#Social-images)" }
+      - { label: "Sub Page", name: "sub", widget: "string", hint: "Existing pages this page is under", required: false }
       - { label: "Description", name: "metaDescription", widget: "string", required: false, hint: "Defaults to description set in SEO and metadata" }
       - { label: "Social Image", name: "ogImage", widget: "image", required: false, hint: "Defaults to image set in SEO and metadescription" }
       - { label: "Body", name: "body", widget: "hidden" }
@@ -60,7 +61,7 @@ collections:
                   - {label: "Image", name: image, widget: image }
                   - {label: "Caption", name: caption, widget: string, required: false }
                   - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
-                  - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right", required: false}
+              - {label: "Image right", name: "flip", widget: "boolean", default: false, hint: "Positions image to the right", required: false}
 
 
           - label: 'Banner'
@@ -188,6 +189,7 @@ collections:
                 fields:
                   - {label: "Name", name: "itemName", widget: string }
                   - {label: "Description", name: "itemeDesc", widget: string }
+                  - {label: "Path", name: "path", widget: string }
                   - {label: "Image", name: "itemImg", widget: image }
 
           - label: "Preset Grid"
@@ -303,8 +305,9 @@ collections:
              - label: "Image"
                name: image
                widget: object
+               required: false
                fields:
-                 - {label: "Image", name: image, widget: image, required: false }
+                 - {label: "Image", name: image, widget: image }
                  - {label: "Alt text", name: imageAlt, widget: string, hint: "A description of the image for web accessibility and improving SEO" }
              - {label: "Video", name: video, widget: file, required: false }
              - label: Image list
