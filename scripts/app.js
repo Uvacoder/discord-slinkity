@@ -95,6 +95,7 @@ $(document).ready(function () {
 
   document.querySelectorAll('.ntlForm').forEach(function (form) {
     form.addEventListener('submit', (event) => {
+      return false;
       event.preventDefault()
       let formData = new FormData(form)
       fetch('/', {
