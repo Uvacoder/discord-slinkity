@@ -1,9 +1,0 @@
----
-navImg: "/static/mf-ico.svg"
-navLinks:
-- displayText: Home
-  url: ''
-- displayText: Services
-  url: services
-- displayText: About
-  url: about
