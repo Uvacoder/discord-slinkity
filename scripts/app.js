@@ -101,10 +101,15 @@ $(document).ready(function () {
         method: 'POST',
         headers: { "Content-Type": "multipart/form-data" },
         body: new URLSearchParams(formData).toString()
-      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      }).then(() => ntlFormSuccess()).catch((error) =>
         alert(error))
 
     });
+
+    function ntlFormSuccess() {
+      console.log("form submitted")
+      form.reset();
+    }
   });
 
 
