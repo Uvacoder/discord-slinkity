@@ -110,6 +110,7 @@ $(document).ready(function () {
     function ntlFormSuccess() {
       console.log("form submitted")
       form.reset();
+      document.querySelector(".successNoti").style.display = "inline";
     }
   });
 
