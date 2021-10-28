@@ -104,14 +104,13 @@ $(document).ready(function () {
       }).then(() => ntlFormSuccess()).catch((error) =>
         alert(error))
 
+      return false;
     });
 
     function ntlFormSuccess() {
       console.log("form submitted")
       form.reset();
     }
-
-    return false;
   });
 
 
