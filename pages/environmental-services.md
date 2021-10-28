@@ -19,4 +19,22 @@ chunks:
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
+  - type: ctaBanner
+    template: chunks/cta-banner.njk
+    content:
+      flip: false
+      subHeading: Interested yet?
+      items:
+        - type: text
+          text: Our environmental services are trusted from the best of the best. Why
+            don't you join our growing list of happy customers?
+        - type: imageList
+          images:
+            - image: /static/257225.svg
+              imageAlt: Ministry of Defence Logo
+            - image: /static/standard-hotel-logo.svg
+              imageAlt: The Standard Hotel Logo
+    button:
+      button: Get a quote
+      buttonUrl: contact
 ---
