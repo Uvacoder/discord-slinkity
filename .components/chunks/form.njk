@@ -32,7 +32,7 @@
         {% endif %}
 
         <div id="submitted" class="w-full lg:w-1/2 border-2 border-lead p-4 md:p-8">
-            <form onsubmit="ntlFormSubmit(event); return false;" name="{{ form.form.formName}}" data-netlify="true" data-netlify-honeypot="bot-field"
+            <form name="{{ form.form.formName}}" action="/" data-netlify="true" data-netlify-honeypot="bot-field"
                  class="ntlForm flex flex-col gap-y-4 justify-between h-full">
                 <input type="hidden" name="bot-field" />
                 <div class="flex flex-wrap gap-4 justify-between">
@@ -99,7 +99,7 @@
         {% endif %}
 
         <div id="submitted" class="w-full lg:w-1/2 border-2 border-lead p-8">
-            <form onsubmit="ntlFormSubmit(event); return false;" name="{{ type.form.formName}}" data-netlify="true" data-netlify-honeypot="bot-field"
+            <form name="{{ type.form.formName}}" action="/" data-netlify="true" data-netlify-honeypot="bot-field"
                  class="ntlForm flex flex-col gap-y-4 justify-between h-full">
                 <input type="hidden" name="bot-field" />
                 <div class="flex flex-wrap gap-4 justify-between">
