@@ -93,26 +93,25 @@ $(document).ready(function () {
 
   // AJAX for all site forms
 
-  document.querySelectorAll('.ntlForm').forEach(function (form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault()
-      let formData = new FormData(form)
-      fetch('/', {
-        method: 'POST',
-        headers: { "Content-Type": "multipart/form-data" },
-        body: new URLSearchParams(formData).toString()
-      }).then(() => ntlFormSuccess()).catch((error) =>
-        alert(error))
-      return false;
+  function ntlFormSubmit(event) {
+    event.preventDefault()
+    let formData = new FormData(form)
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "multipart/form-data" },
+      body: new URLSearchParams(formData).toString()
+    }).then(() => ntlFormSuccess()).catch((error) =>
+      alert(error))
+    return false;
+  }
 
-    });
-
-    function ntlFormSuccess() {
+  function ntlFormSuccess() {
+    document.querySelectorAll('.ntlForm').forEach(function (form) {
       console.log("form submitted")
       form.reset();
       document.querySelector(".successNoti").style.display = "inline";
-    }
-  });
+    });
+  }
 
 
 });
