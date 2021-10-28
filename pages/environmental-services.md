@@ -5,6 +5,15 @@ chunks:
   - type: pageHeading
     template: chunks/page-title.njk
     heading: Environmental Services
+  - type: text
+    template: chunks/text.njk
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam.
+    align: center
   - type: banner
     template: chunks/banner.njk
     flip: true
@@ -23,7 +32,7 @@ chunks:
     template: chunks/cta-banner.njk
     content:
       flip: false
-      subHeading: Interested yet?
+      subHeading: Still not quite convinced?.. free quotes all around.
       items:
         - type: text
           text: Our environmental services are trusted from the best of the best. Why

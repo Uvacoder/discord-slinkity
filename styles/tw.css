@@ -441,7 +441,7 @@
       }
 
       /* Hamburger styles */
-      .line{transition:opacity 20ms cubic-bezier(.4,0,.2,1);transform-origin:center left}.line1,.line2{transition:transform 20ms cubic-bezier(.4,0,.2,1)}.ham{transform:translateX(0);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:1}.cross{transform:translateX(-80%);transition:transform .1s cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:0}.nav__open .ham{transform:translateX(100%);opacity:0}.nav__open .cross{transform:translateX(0);opacity:1}
+      .line{transition:opacity 20ms cubic-bezier(.4,0,.2,1);transform-origin:center left}.line1,.line2{transition:transform 20ms cubic-bezier(.4,0,.2,1)}.ham{transform:translateX(0);transition:transform 70ms cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:1}.cross{transform:translateX(-80%);transition:transform 70ms cubic-bezier(.4,0,1,1) 20ms,opacity 20ms cubic-bezier(.4,0,1,1);opacity:0}.nav__open .ham{transform:translateX(100%);opacity:0}.nav__open .cross{transform:translateX(0);opacity:1}
 
       @media (min-width: 1024px) {  
         .servicesCard {

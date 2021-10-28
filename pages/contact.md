@@ -37,6 +37,7 @@ chunks:
 
 
             If you have experience in any of these rolls within the water/air sectors please don’t hesitate to get in touch. Competitive rates of pay within a growing company. 
-    button: Join the team
-    buttonUrl: careers
+    button:
+      button: Join the team
+      buttonUrl: careers
 ---

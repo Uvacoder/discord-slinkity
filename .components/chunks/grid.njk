@@ -1,13 +1,17 @@
 {% if type.preset == true %}
 <section class="container mx-auto px-4 sectionMargin clear-both">
       {% if grid.heading %}
-          <div class="mx-auto px-10 md:px-4 mb-12">
+          <div class="mx-auto px-4 mb-12">
         <h1 class="text-center">{{ grid.heading | safe }}</h1>
             </div>
       {% endif %}
     <div class="flex justify-center flex-wrap w-full gap-8">
  {% for item in grid.items %}
-        <a href="{{ item.path }}" class="w-full md:w-auto servicesCard flex-grow">
+       {% if item.path %}
+        <a href="/{{ item.path }}" class="w-full md:w-auto servicesCard flex-grow">
+        {% else %}
+                <div class="w-full md:w-auto servicesCard flex-grow">
+       {% endif %}
             <div class="h-[20ch] border-2 border-lead p-8 flex relative {{ 'w-full' if type.wide == true }}">
                 <div class="self-end">
                     <h2 class="linkAnime z-10 max-w-[35ch] align-bottom table-cell">{{ item.itemName | safe }}</h2>
@@ -17,7 +21,11 @@
                     style="background-image: url('{{ item.itemImg | safe }}'); background-size: cover; z-index: 1; opacity: 0.25; background-position: center; filter: brightness(80%);">
                 </div>
             </div>
-        </a>
+        {% if item.path %}
+        <a>
+        {% else %}
+        </div>
+        {% endif %}
 {% endfor %}
 
     </div>
@@ -26,13 +34,13 @@
 
 <section class="container mx-auto px-4 sectionMargin clear-both">
       {% if type.heading %}
-          <div class="mx-auto px-10 md:px-4 mb-12">
+          <div class="mx-auto px-4 mb-12">
         <h1 class="text-center">{{ type.heading | safe }}</h1>
             </div>
       {% endif %}
     <div class="flex justify-center flex-wrap w-full gap-8">
  {% for item in type.items %}
-        <a href="{{ item.path }}" class="w-full md:w-auto servicesCard flex-grow">
+        <a href="/{{ item.path }}" class="w-full md:w-auto servicesCard flex-grow">
             <div class="h-[20ch] border-2 border-lead p-8 flex relative {{ 'w-full' if type.wide == true }}">
                 <div class="self-end">
                     <h2 class="linkAnime z-10 max-w-[35ch] align-bottom table-cell">{{ item.itemName | safe }}</h2>

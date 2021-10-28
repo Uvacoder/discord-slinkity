@@ -11,7 +11,7 @@ chunks:
     heading: About us
   - type: textImage
     template: chunks/text-image.njk
-    flip: true
+    flip: false
     text: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -62,6 +62,7 @@ chunks:
 
 
             If you have experience in any of these rolls within the water/air sectors please don’t hesitate to get in touch. Competitive rates of pay within a growing company. 
-    button: Join the team
-    buttonUrl: careers
+    button:
+      button: Join the team
+      buttonUrl: careers
 ---

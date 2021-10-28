@@ -47,6 +47,11 @@ collections:
             fields:
               - { label: Template, name: template, widget: hidden, default: 'chunks/text.njk' }
               - { label: Content, name: text, widget: markdown }
+              - label: "Align Text"
+                name: "align"
+                widget: "select"
+                options: ["left", "center", "right"]
+                default: ["left"]
 
           - label: 'Text & image'
             name: 'textImage'

@@ -6,7 +6,7 @@ chunks:
     heading: Our Responsibility
   - type: textImage
     template: chunks/text-image.njk
-    flip: false
+    flip: true
     image:
       image: static/water-tank.jpg
       imageAlt: water tank
