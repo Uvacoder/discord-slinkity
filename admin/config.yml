@@ -138,6 +138,16 @@ collections:
                   - {label: "Name", name: slideName, widget: string }
                   - {label: "Company", name: slideCompany, widget: string }
 
+          - label: "Preset Testimonials"
+            name: "presetTestimonals"
+            collapsed: true
+            summary: "Preset chunks can not be edited here"
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/testimonials.njk' }
+              - { label: Preset, name: preset, widget: hidden, default: 'true' }
+
+
           - label: 'Services List'
             name: 'servicesList'
             widget: object
@@ -165,9 +175,23 @@ collections:
                   - { label: Button, name: button, widget: string, pattern: ['^.{1,19}$', "Maximum 19 characters"] }
                   - { label: Path, name: buttonUrl, widget: string, hint: "Path to page. [Learn more](https://moonface.digital/support/titan#Social-images)" }
 
+          - label: 'Grid'
+            name: 'grid'
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: 'chunks/grid.njk' }
+              - { label: Heading, name: heading, widget: string, required: false }
+              - label: "Items"
+                label_singular: "Item"
+                name: "items"
+                widget: list
+                fields:
+                  - {label: "Name", name: "itemName", widget: string }
+                  - {label: "Description", name: "itemeDesc", widget: string }
+                  - {label: "Image", name: "itemImg", widget: image }
 
-          - label: "Grid"
-            name: "grid"
+          - label: "Preset Grid"
+            name: "presetGrid"
             collapsed: true
             summary: "Preset chunks can not be edited here"
             widget: object
@@ -400,7 +424,7 @@ collections:
 
       - label: 'Grid'
         name: 'grid'
-        file: "_data/sgrid.yaml"
+        file: "_data/grid.yaml"
         widget: object
         fields:
           - { label: Template, name: template, widget: hidden, default: 'chunks/grid.njk' }
@@ -410,9 +434,27 @@ collections:
             name: "items"
             widget: list
             fields:
-              - {label: "Service Name", name: "itemName", widget: string }
+              - {label: "Name", name: "itemName", widget: string }
               - {label: "Description", name: "itemeDesc", widget: string }
               - {label: "Image", name: "itemImg", widget: image }
+
+      - label: 'Testimonials'
+        name: 'testimonials'
+        file: "_data/testimonials.yaml"
+        widget: object
+        fields:
+          - { label: Template, name: template, widget: hidden, default: 'chunks/testimonials.njk' }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - label: "Slides"
+            label_singular: "Slide"
+            name: "slides"
+            hint: "You should have at least 3 of these"
+            widget: list
+            summary: "{{fields.slideCompany}}"
+            fields:
+              - {label: "Quote", name: "slideQuote", widget: "string", pattern: ['^.{1,123}$', "Maximum 123 characters"], hint: "Do not include quotation marks" }
+              - {label: "Name", name: slideName, widget: string }
+              - {label: "Company", name: slideCompany, widget: string }
 
      
   - name: "settings"

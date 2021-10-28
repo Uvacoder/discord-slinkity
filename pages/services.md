@@ -11,19 +11,7 @@ chunks:
     heading: Here's what we do
   - type: grid
     template: chunks/grid.njk
-    services:
-      - serviceName: Environmental Services
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        serviceImg: /static/water-tank.jpg
-      - serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        serviceImg: /static/water-tank.jpg
-        serviceName: Legionella Testing
-      - serviceName: Water Treatment
-        serviceDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        serviceImg: /static/water-tank.jpg
+    preset: true
   - type: presetForm
     template: chunks/form.njk
     preset: true
