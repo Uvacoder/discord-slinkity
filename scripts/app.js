@@ -96,27 +96,13 @@ $(document).ready(function () {
   document.querySelectorAll('.ntlForm').forEach(function (form) {
     form.addEventListener('submit', (event) => {
 
-      // disable default action
-      event.preventDefault();
-
-      // configure a request
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', '/');
-
-      // prepare form data
-      let data = new FormData(form);
-
-      // set headers
-      xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-
-      // send request
-      xhr.send(data);
-
-      // listen for `load` event
-      xhr.onload = () => {
-        console.log(xhr.responseText);
-      }
+      let formData = new FormData(form)
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "multipart/form-data" },
+        body: new URLSearchParams(formData).toString()
+      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+        alert(error))
 
     });
   });
