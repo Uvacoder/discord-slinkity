@@ -2,10 +2,10 @@
   <div class="container h-full mx-auto px-4 overflow-auto">
     <div class="w-full h-full navModalGrid items-center p-8">
       <ul id="modalLinks" class="w-full text-center">
-        {% for link in nav.navLinks -%}
+        {% for link in nav.links -%}
         <li>
-          <a class="text-lead leading-none inline-block" href="/{{ link.url }}">
-            <h1 class="my-3">{{ link.displayText }}</h1>
+          <a class="text-lead leading-none inline-block" href="/{{ link.path }}">
+            <h1 class="my-3">{{ link.text }}</h1>
           </a>
         </li>
         {% endfor -%}
