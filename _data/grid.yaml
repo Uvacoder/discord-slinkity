@@ -16,7 +16,7 @@ items:
   - itemName: Water Treatment
     itemDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    itemImg: /static/water-tank.jpg
+    itemImg: /static/chemical-bottle.jpg
     itemeDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed
       do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
     path: services/water-treatment
