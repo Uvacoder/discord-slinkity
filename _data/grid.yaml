@@ -9,7 +9,7 @@ items:
   - itemName: Legionella Testing
     itemDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    itemImg: /static/water-tank.jpg
+    itemImg: /static/legionella-bacteria-legionella-risk-assessments2.jpg
     itemeDesc: Lorem ipsum dolor sit amet, consectetur adipiscing eliy, sed
       do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
     path: services/legionella-testing
