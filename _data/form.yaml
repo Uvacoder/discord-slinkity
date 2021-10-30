@@ -1,27 +1,27 @@
 template: chunks/form.njk
 heading: Get in touch
 content:
-  text: >-
-    Our friendly team will be happy guiding you and your business on the way to safe drinking water.
+  text: Our friendly team will be happy guiding you and your business on the way
+    to safe drinking water.
   contacts:
-  - name: Phone
-    contact: "+44 0179312345"
-  - name: Email
-    contact: enquiries@lavean.co.uk
-  - name: Fax
-    contact: fax@lavean.co.uk
+    - name: Phone
+      contact: +44 0179312345
+    - name: Email
+      contact: enquiries@lavean.co.uk
+    - name: Fax
+      contact: fax@lavean.co.uk
   image:
-    image: "/static/water-tank.jpg"
+    image: /static/vans-2-.jpg
     imageAlt: water tank
 form:
   formName: contact
   fields:
-  - label: Name
-    name: name
-    type: text
-  - label: Email
-    name: email
-    type: email
-  - label: Company
-    name: company
-    type: text
+    - label: Name
+      name: name
+      type: text
+    - label: Email
+      name: email
+      type: email
+    - label: Company
+      name: company
+      type: text
