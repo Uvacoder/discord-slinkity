@@ -4,7 +4,7 @@ cta:
   path: contact
 heroContent:
   image:
-    image: /static/water-tank.jpg
+    image: /static/chemical-bottles.jpg
     imageAlt: water tank
   imageList:
     images:
