@@ -1,10 +1,10 @@
-text: "*HIGH QUALITY WATER TREATMENT & LEGIONELLA CONTROL FOR YOUR BUSINESS*"
+text: "## *QUALITY WATER TREATMENT & LEGIONELLA CONTROL FOR YOUR BUSINESS*"
 cta:
   text: Contact Us
   path: contact
 heroContent:
   image:
-    image: /static/vans-2-.jpg
+    image: /static/water-tank.jpg
     imageAlt: water tank
   imageList:
     images:
