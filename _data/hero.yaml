@@ -4,7 +4,7 @@ cta:
   path: contact
 heroContent:
   image:
-    image: /static/safecontractor-logo-light.svg
+    image: /static/vans.jpg
     imageAlt: water tank
   imageList:
     images:
