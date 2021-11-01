@@ -102,13 +102,18 @@ $(document).ready(function () {
         headers: { "Content-Type": "multipart/form-data" },
         body: new URLSearchParams(formData).toString()
       }).then(() => ntlFormSuccess()).catch((error) =>
-        alert(error))
+        ntlFormError())
     });
 
     function ntlFormSuccess() {
       console.log("form submitted")
       form.reset();
       document.querySelector(".successNoti").style.display = "inline";
+    }
+
+    function ntlFormError() {
+      console.log("form error")
+      document.querySelector(".failedNoti").style.display = "inline";
     }
   });
 

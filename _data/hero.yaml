@@ -1,4 +1,4 @@
-text: "> ###### ***WATER TREATMENT & LEGIONELLA CONTROL FOR YOUR BUSINESS***"
+text: "WATER TREATMENT & LEGIONELLA CONTROL FOR YOUR BUSINESS"
 cta:
   text: Contact Us
   path: contact
@@ -12,5 +12,3 @@ heroContent:
         imageAlt: safe contractor logo
       - image: /static/wms-logo-light.svg
         imageAlt: water management society logo
-      - image: /static/257225.svg
-        imageAlt: "client "

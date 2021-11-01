@@ -5,7 +5,7 @@
     <div class="container flex flex-col lg:flex-row justify-between lg:items-center relative px-4 mx-auto h-full w-full"
         style="z-index: 3;">
         <div class="">
-            <h1 class="text-ivory uppercase max-w-[18ch] lg:w-[11ch] leading-tight">{{ hero.text | markdownify | safe }}
+            <h1 class="text-ivory uppercase max-w-[18ch] lg:w-[11ch] leading-tight whitespace-normal">{{ hero.text | markdownify | safe }}
             </h1>
             <div class="inline-block">
                 <a href="/{{ hero.cta.path | safe}}" class="primaryBtn mt-4 mb-12">{{ hero.cta.text | safe}}</a>
