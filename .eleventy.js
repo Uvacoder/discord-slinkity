@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
   // layout aliases! Say you have a bunch of existing content using
   // layout: post. If you don’t want to rewrite all of those values, just map
   // post to a new file like this:
-  // eleventyConfig.addLayoutAlias("post", ".layouts/my_new_post_layout.njk");
+  // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
 
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
@@ -144,7 +144,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("scripts/");
 
   if (process.env.NODE_ENV === 'production') {
-    eleventyConfig.addPassthroughCopy({ './styles/_output.css': '/styles/tw.css' });
+    eleventyConfig.addPassthroughCopy({ '/styles/_output.css': '/styles/tw.css' });
   }
   if (process.env.NODE === 'production') {
     eleventyConfig.addPlugin(img2picture,);
@@ -180,8 +180,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginBetterSlug);
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
-  // Images
-
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
@@ -196,11 +194,11 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {
-      input: ".",
-      includes: ".components",
-      layouts: ".layouts",
-      data: "_data",
-      output: ".www"
+      input: 'src',
+      output: 'src',
+      data: '_data',
+      includes: 'components',
+      layouts: 'layouts',
     }
   };
 };

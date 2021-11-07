@@ -1,0 +1,19 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}" {% endif %} lang="en" id="_atmos">
+
+{% include "src/components/head.njk" %}
+
+<body class="bg-ivory">
+	<header>
+		{% include "src/components/nav.njk" %}
+	</header>
+	<main class="mt-32 lg:mt-44">
+		{{ layoutContent | safe }}
+			{% include "src/components/titan.njk" %}
+	</main>	
+	{% include "src/components/feedback.njk" %}
+	{% include "src/components/footer.njk" %}
+
+</body>
+
+</html>

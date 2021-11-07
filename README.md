@@ -93,8 +93,8 @@ NODE_ENV      production
 
 ### Structure
 
-- `.components` - Partials & macros [Eleventy's components](https://www.11ty.dev/docs/config/#directory-for-includes) (default name is `_includes`)
-- `.layouts` - Pages & Sub-pages [layouts](https://www.11ty.dev/docs/layouts/#layouts)
+- `components` - Partials & macros [Eleventy's components](https://www.11ty.dev/docs/config/#directory-for-includes) (default name is `_includes`)
+- `layouts` - Pages & Sub-pages [layouts](https://www.11ty.dev/docs/layouts/#layouts)
 - `.www` - Built site. This is your `publish directory` when deploying (default name is `_site`)
 - `_data` - For all [Global data files](https://www.11ty.dev/docs/data-global/)
 - `pages` - All of your site's pages in markdown
@@ -142,7 +142,7 @@ By default atmos uses [TailwindCSS](https://tailwindcss.com) to generate styles.
     eleventyConfig.addPassthroughCopy({ './styles/_output.css': '/styles/tw.css' });
   }
   ```
-4. Remove this from `.components/head.njk`
+4. Remove this from `components/head.njk`
   ```
     {% if env.environment == "production" %}
   {% set css %}

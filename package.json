@@ -1,31 +1,31 @@
 {
-  "name": "lavean-services",
-  "title": "Lavean Services Ltd",
-  "description": "Official site for Lavean Services Ltd — Created by Moonface",
+  "name": "atmos",
+  "title": "Atmos",
+  "description": "Atmos by Moonface",
   "scripts": {
-    "eleventy:serve": "eleventy --serve",
-    "eleventy:build": "set NODE_ENV=production&&eleventy",
-    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css",
-    "tailwind:dev": "tailwindcss -i ./styles/tw.css -c ./styles/tailwind.config.js -o ./styles/_output.css --watch --jit",
+    "eleventy:dev": "eleventy --watch",
+    "eleventy:prod": "set NODE_ENV=production&&eleventy",
+    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o styles/_output.css",
+    "tailwind:dev": "tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o styles/_output.css --watch --jit",
+    "vite:dev": "vite",
+    "vite:prod": "vite build",
     "env": "set NODE_ENV=production",
     "reset": "rm -rf .www",
-    "start": "run-p -l reset tailwind:dev eleventy:serve",
-    "build": "run-s -l reset env tailwind:prod eleventy:build",
-    "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "start": "run-p reset *:dev",
+    "build": "run-s reset *:prod"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonfacedesign/lavean-services"
+    "url": "https://github.com/moonfacedesign/atmos"
   },
   "author": {
     "name": "MoonFace",
     "email": "hello@moonface.digital",
-    "url": "https://lavean.co.uk"
+    "url": "https://moonface.digital"
   },
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/moonfacedesign/lavean-services/issues"
+    "url": "https://github.com/moonfacedesign/atmos/issues"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -47,6 +47,10 @@
     "tailwindcss": "^2.2.4",
     "terser": "^5.6.1",
     "uglify-es": "^3.3.9",
+    "vite": "^2.6.13",
     "workbox-build": "^6.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.6.2"
   }
 }
