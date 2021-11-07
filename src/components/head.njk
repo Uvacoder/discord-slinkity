@@ -31,19 +31,19 @@
   
   {% if env.environment !== "production" %}
   {% set css %}
-    {% include "styles/_output.css" %}
+    {% include "src/styles/_output.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
   {% else %}
-    <link rel="stylesheet" href="/styles/tw.css">
+    <link rel="stylesheet" href="src/styles/tw.css">
   {% endif %}
 
 
   {% set js %}
-    {% include "scripts/vendor/siema.js" %}
-    {% include "scripts/tabs.js" %}
-    {% include "scripts/vendor/jquery.js" %}
-    {% include "scripts/app.js" %}
+    {% include "src/scripts/vendor/siema.js" %}
+    {% include "src/scripts/tabs.js" %}
+    {% include "src/scripts/vendor/jquery.js" %}
+    {% include "src/scripts/app.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
 

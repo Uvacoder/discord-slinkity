@@ -1,0 +1,32 @@
+{
+    "name": "Moonface — Performant, design-driven sites for your brand",
+    "short_name": "Moonface",
+    "start_url": "/",
+    "display": "minimal-ui",
+    "theme_color": "#212121",
+    "background_color": "#fff",
+    "orientation": "portrait",
+    "description": "We're JAMstack experts devoted to designing and developing scalable websites for all",
+    "categories": [
+        "web design",
+        "web development",
+        "ui",
+        "ux",
+        "ethical design",
+        "swindon"
+    ],
+    "icons": [
+        {
+            "src": "/static/pwa/manifest-icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "/static/pwa/manifest-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ]
+}

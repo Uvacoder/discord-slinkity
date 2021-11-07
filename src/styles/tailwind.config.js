@@ -1,8 +1,8 @@
 // tailwind.config.js
 module.exports = {
     purge: [
-        './src/components/**/*.{js,ts,njk,html}',
-        './layouts/**/*.{js,ts,njk,html}',
+        './.components/**/*.{js,ts,njk,html}',
+        './.layouts/**/*.{js,ts,njk,html}',
         './.scripts/**/*.{js,ts,njk,html}',
         './.styles/**/*.{js,ts,njk,html}',
     ],
@@ -22,7 +22,7 @@ module.exports = {
         },
         extend: {
             colors: {
-                'ivory': '#FFF5E9',
+                'ivory': 'rgb(255, 245, 233)',
                 'lead': '#121211',
                 'sunglow': '#FFB522',
                 'brass': '#CD7A29',

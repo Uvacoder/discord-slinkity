@@ -14,12 +14,12 @@ const img2pictureOptions = {
   /*
    * 🚨 Required parameters
    */
-  eleventyInputDir: ".", // Should be same as Eleventy input folder set using `dir.input`.
+  eleventyInputDir: "src", // Should be same as Eleventy input folder set using `dir.input`.
   imagesOutputDir: ".www/static", // Output folder for optimized images.
   // URL prefix for images src URLS.
   // It should match with path suffix in `imagesOutputDir`.
   // Eg: imagesOutputDir with `_site/images` likely need urlPath as `/images/`
-  urlPath: "/static/",
+  urlPath: ".www/static/",
 
   /*
    * 🔧 Optional parameters
@@ -139,9 +139,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(img2picture, img2pictureOptions);
 
   // Don't process folders with static assets e.g. images
-  eleventyConfig.addPassthroughCopy("static/");
-  eleventyConfig.addPassthroughCopy("admin/");
-  eleventyConfig.addPassthroughCopy("scripts/");
+  eleventyConfig.addPassthroughCopy("src/admin/");
+  eleventyConfig.addPassthroughCopy("src/scripts/");
 
   if (process.env.NODE_ENV === 'production') {
     eleventyConfig.addPassthroughCopy({ '/styles/_output.css': '/styles/tw.css' });
@@ -150,7 +149,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(img2picture,);
   } else {
     // During development, you need to copy the files to `_site`
-    eleventyConfig.addPassthroughCopy("./images");
+    eleventyConfig.addPassthroughCopy("src/static/");
   }
 
   /* Markdown Plugins */
@@ -195,7 +194,7 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: "njk",
     dir: {
       input: 'src',
-      output: 'src',
+      output: ".www",
       data: '_data',
       includes: 'components',
       layouts: 'layouts',

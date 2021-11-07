@@ -3,16 +3,14 @@
   "title": "Atmos",
   "description": "Atmos by Moonface",
   "scripts": {
-    "eleventy:dev": "eleventy --watch",
-    "eleventy:prod": "set NODE_ENV=production&&eleventy",
-    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o styles/_output.css",
-    "tailwind:dev": "tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o styles/_output.css --watch --jit",
-    "vite:dev": "vite",
-    "vite:prod": "vite build",
+    "start": "run-p -l reset *:dev",
+    "tailwind:dev": "tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o ./src/styles/_output.css --watch --jit",
+    "eleventy:dev": "slinkity --serve --incremental",
+    "build": "run-s -l reset env *:prod",
+    "tailwind:prod": "set NODE_ENV=production&&tailwindcss -i ./src/styles/tw.css -c ./src/styles/tailwind.config.js -o ./src/styles/_output.css",
+    "eleventy:prod": "set NODE_ENV=production&&slinkity",
     "env": "set NODE_ENV=production",
-    "reset": "rm -rf .www",
-    "start": "run-p reset *:dev",
-    "build": "run-s reset *:prod"
+    "reset": "rm -rf .www"
   },
   "repository": {
     "type": "git",
@@ -28,7 +26,6 @@
     "url": "https://github.com/moonfacedesign/atmos/issues"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
     "@borisschapira/eleventy-plugin-better-slug": "^1.0.1",
     "autoprefixer": "^10.3.1",
     "chalk": "^4.1.1",
@@ -47,10 +44,10 @@
     "tailwindcss": "^2.2.4",
     "terser": "^5.6.1",
     "uglify-es": "^3.3.9",
-    "vite": "^2.6.13",
     "workbox-build": "^6.1.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-legacy": "^1.6.2"
+    "@11ty/eleventy": "^1.0.0-beta.4",
+    "slinkity": "^0.3.3"
   }
 }
